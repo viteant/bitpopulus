@@ -1,0 +1,81 @@
+---
+interface Props {
+    badge: string;
+    titleBefore: string;
+    titleHighlight: string;
+    titleAfter: string;
+    description: string;
+    primaryCta: string;
+    primaryHref?: string;
+    secondaryCta: string;
+    secondaryHref?: string;
+    imageSrc: string;
+    imageAlt: string;
+    floatingTop: string;
+    floatingBottom: string;
+}
+
+const {
+    badge,
+    titleBefore,
+    titleHighlight,
+    titleAfter,
+    description,
+    primaryCta,
+    primaryHref = "#contact",
+    secondaryCta,
+    secondaryHref = "#portfolio",
+    imageSrc,
+    imageAlt,
+    floatingTop,
+    floatingBottom,
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-surface px-8 pt-20 pb-32">
+    <div class="mx-auto grid max-w-350 grid-cols-1 items-center gap-16 lg:grid-cols-2">
+        <div class="z-10">
+      <span class="mb-6 inline-block rounded-full border-2 border-zinc-900 bg-tertiary-fixed px-4 py-1 text-xs font-bold uppercase tracking-widest text-on-tertiary-fixed neubrutalism-shadow-small">
+        {badge}
+      </span>
+
+            <h1 class="mb-8 text-6xl font-black leading-[0.9] tracking-tighter md:text-7xl">
+                {titleBefore} <span class="text-gradient">{titleHighlight}</span> {titleAfter}
+            </h1>
+
+            <p class="mb-10 max-w-xl text-lg font-medium leading-relaxed text-on-surface-variant md:text-xl">
+                {description}
+            </p>
+
+            <div class="flex flex-wrap gap-6">
+                <a
+                        href={primaryHref}
+                        class="border-4 border-zinc-900 bg-brand-gradient px-10 py-5 text-lg font-black uppercase text-white transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none neubrutalism-shadow"
+                >
+                    {primaryCta}
+                </a>
+
+                <a
+                        href={secondaryHref}
+                        class="border-4 border-zinc-900 bg-white px-10 py-5 text-lg font-black uppercase text-zinc-900 transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none neubrutalism-shadow"
+                >
+                    {secondaryCta}
+                </a>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="relative z-10 overflow-hidden rounded-xl border-4 border-zinc-900 neubrutalism-shadow">
+                <img src={imageSrc} alt={imageAlt} class="h-[500px] w-full object-cover" />
+            </div>
+
+            <div class="absolute -top-12 -left-12 z-20 hidden rounded-xl border-4 border-zinc-900 bg-secondary-container p-6 md:block neubrutalism-shadow">
+                <p class="font-black">{floatingTop}</p>
+            </div>
+
+            <div class="absolute -right-8 -bottom-8 z-20 hidden rounded-xl border-4 border-zinc-900 bg-tertiary-fixed p-6 md:block neubrutalism-shadow">
+                <p class="font-black">{floatingBottom}</p>
+            </div>
+        </div>
+    </div>
+</section>

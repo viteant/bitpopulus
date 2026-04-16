@@ -1,0 +1,69 @@
+---
+interface PortfolioItem {
+    title: string;
+    category: string;
+    href?: string;
+    imageSrc: string;
+    imageAlt: string;
+    offset?: boolean;
+}
+
+interface Props {
+    title: string;
+    titleMuted: string;
+    viewAllLabel: string;
+    viewAllHref?: string;
+    items: PortfolioItem[];
+}
+
+const {
+    title,
+    titleMuted,
+    viewAllLabel,
+    viewAllHref = "#",
+    items,
+} = Astro.props;
+---
+
+<section id="portfolio" class="bg-white px-8 py-32">
+    <div class="mx-auto max-w-screen-2xl">
+        <div class="mb-16 flex lg:flex-row flex-col items-center justify-between gap-4">
+            <h2 class="shrink-0 text-6xl font-black uppercase tracking-tighter flex flex-row flex-wrap">
+                {title} <span class="text-zinc-300">{titleMuted}</span>
+            </h2>
+
+            <div class="hidden h-2 flex-grow bg-zinc-900 sm:block"></div>
+
+            <a
+                    href={viewAllHref}
+                    class="flex items-center gap-2 border-4 border-zinc-900 bg-white px-8 py-3 text-lg font-black uppercase text-zinc-900 transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none neubrutalism-shadow-small"
+            >
+                {viewAllLabel}
+                <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
+            {items.map((item) => (
+                    <a href={item.href ?? "#"} class:list={["group cursor-pointer", item.offset ? "md:mt-24" : ""]}>
+                        <div class="mb-8 overflow-hidden rounded-xl border-4 border-zinc-900 transition-all group-hover:translate-x-[8px] group-hover:translate-y-[8px] group-hover:shadow-none neubrutalism-shadow">
+                            <img
+                                    src={item.imageSrc}
+                                    alt={item.imageAlt}
+                                    class="h-[450px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                        </div>
+
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <h3 class="mb-2 text-3xl font-black uppercase italic">{item.title}</h3>
+                                <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">{item.category}</p>
+                            </div>
+
+                            <span class="material-symbols-outlined text-4xl">north_east</span>
+                        </div>
+                    </a>
+            ))}
+        </div>
+    </div>
+</section>

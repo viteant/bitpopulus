@@ -1,0 +1,73 @@
+---
+interface QuoteBlock {
+    quote: string
+    cite: string
+}
+
+interface ChecklistItem {
+    text: string
+}
+
+interface BodyContent {
+    intro: string
+    sectionTitle: string
+    paragraph: string
+    quote: QuoteBlock
+    subTitle: string
+    paragraphAfterQuote: string
+    checklist: ChecklistItem[]
+}
+
+interface Props {
+    content: BodyContent
+}
+
+const { content } = Astro.props
+---
+
+<article class="lg:col-span-8">
+    <div class="prose prose-lg max-w-none text-on-surface">
+        <p class="text-2xl font-bold leading-relaxed mb-8 first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:text-primary">
+            {content.intro}
+        </p>
+
+        <h2 class="text-3xl font-black tracking-tighter uppercase mb-6 mt-12 border-l-8 border-[#6A00F4] pl-6">
+            {content.sectionTitle}
+        </h2>
+
+        <p class="mb-6 leading-relaxed text-zinc-700 text-lg">
+            {content.paragraph}
+        </p>
+
+        <blockquote class="my-12 relative p-8 border-4 border-zinc-900 bg-surface-container-low neubrutal-shadow-sm rotate-1">
+      <span class="material-symbols-outlined text-6xl text-[#B5179E] absolute -top-6 -left-6 bg-white rounded-full border-2 border-zinc-900 p-2">
+        format_quote
+      </span>
+
+            <p class="text-2xl font-black italic tracking-tight leading-snug">
+                "{content.quote.quote}"
+            </p>
+
+            <cite class="block mt-4 font-black uppercase tracking-widest text-sm text-[#FF7A00]">
+                — {content.quote.cite}
+            </cite>
+        </blockquote>
+
+        <h3 class="text-2xl font-black tracking-tight mb-4">{content.subTitle}</h3>
+
+        <p class="mb-6 leading-relaxed text-zinc-700 text-lg">
+            {content.paragraphAfterQuote}
+        </p>
+
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 list-none p-0">
+            {content.checklist.map((item) => (
+                    <li class="bg-white border-2 border-zinc-900 p-4 font-bold flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#2ECC71]" style="font-variation-settings: 'FILL' 1;">
+            check_circle
+          </span>
+                        {item.text}
+                    </li>
+            ))}
+        </ul>
+    </div>
+</article>

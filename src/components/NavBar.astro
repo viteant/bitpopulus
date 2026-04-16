@@ -1,0 +1,176 @@
+---
+import Logo from "./Logo.astro";
+import { navItemsEs, navItemsEn, routeTranslations, getRouteKeyByOriginalPath, getLanguageFromURL } from "../utils/i18n";
+
+interface Props {
+    lang?: "es" | "en";
+    altPath?: string;
+}
+
+const { lang: propLang, altPath } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+// Detection priority: Prop -> URL -> Default
+const detectedLang = propLang || getLanguageFromURL(currentPath);
+const lang = detectedLang as "es" | "en";
+
+// Resolve the current page's key (e.g. 'about', 'contact')
+const routeKey = getRouteKeyByOriginalPath(currentPath, lang) || 'home';
+
+// Determine the toggle links for the alternate language
+const defaultAltLang = lang === "es" ? "en" : "es";
+const altLangPath = altPath || routeTranslations[defaultAltLang][routeKey];
+
+const navItems = lang === "es" ? navItemsEs : navItemsEn;
+---
+
+<header class="sticky top-0 z-50 w-full border-b-4 border-zinc-900 bg-white/80 backdrop-blur-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    <nav class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 py-4 md:px-8 md:py-6">
+        <div class="">
+            <Logo width={150}/>
+        </div>
+
+        <div class="hidden items-center space-x-8 md:flex">
+            {navItems.map((item, index) => (
+                    <a
+                            href={routeTranslations[lang][item.key]}
+                            class:list={[
+                                "font-inter text-sm font-bold uppercase tracking-tight transition-all duration-100",
+                                currentPath === routeTranslations[lang][item.key] || currentPath === routeTranslations[lang][item.key] + '/'
+                                    ? "border-b-2 border-zinc-900 pb-1 text-violet-600"
+                                    : "text-zinc-600 hover:translate-x-[2px] hover:translate-y-[2px] hover:text-zinc-900",
+                            ]}
+                    >
+                        {item.label}
+                    </a>
+            ))}
+        </div>
+
+        <div class="flex items-center gap-3">
+            <!-- Language Switcher -->
+            <a
+               href={altLangPath}
+               class="hidden md:flex border-2 border-zinc-900 bg-white px-3 py-2 text-xs font-black tracking-widest text-zinc-900 transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none neubrutalism-shadow-small"
+               title={`Switch to ${lang === 'es' ? 'English' : 'Español'}`}
+            >
+                {lang === 'es' ? 'EN' : 'ES'}
+            </a>
+
+            <button
+                    class="hidden border-2 border-zinc-900 bg-secondary-container px-6 py-2 text-xs font-black uppercase tracking-widest text-on-secondary-container transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none md:inline-block neubrutalism-shadow-small"
+            >
+                Get Started
+            </button>
+
+            <!-- Language Switcher Mobile (next to the hamburger icon) -->
+            <a
+               href={altLangPath}
+               class="md:hidden flex h-11 items-center justify-center rounded-lg border-2 border-zinc-900 bg-white px-3 text-xs font-black tracking-widest text-zinc-900"
+               title={`Switch to ${lang === 'es' ? 'English' : 'Español'}`}
+            >
+                {lang === 'es' ? 'EN' : 'ES'}
+            </a>
+
+            <button
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-drawer"
+                    class="flex h-11 w-11 items-center justify-center rounded-lg border-2 border-zinc-900 bg-white md:hidden"
+            >
+                <span class="sr-only">Open menu</span>
+                <div class="flex flex-col gap-1.5">
+                    <span class="block h-0.5 w-5 bg-zinc-900"></span>
+                    <span class="block h-0.5 w-5 bg-zinc-900"></span>
+                    <span class="block h-0.5 w-5 bg-zinc-900"></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div
+        id="drawer-overlay"
+        class="pointer-events-none fixed inset-0 z-[60] bg-black/40 opacity-0 transition-opacity duration-300 md:hidden"
+></div>
+
+<aside
+        id="mobile-drawer"
+        class="fixed top-0 right-0 z-[70] flex h-dvh w-[85%] max-w-sm translate-x-full flex-col border-l-4 border-zinc-900 bg-white transition-transform duration-300 md:hidden"
+        aria-hidden="true"
+>
+    <div class="flex items-center justify-between border-b-4 border-zinc-900 px-4 py-4">
+        <div class="bg-gradient-to-r from-[#6A00F4] via-[#B5179E] to-[#FF7A00] bg-clip-text text-xl font-black italic tracking-tighter text-transparent">
+            BitPopulus
+        </div>
+
+        <button
+                id="menu-close"
+                type="button"
+                aria-label="Close menu"
+                class="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-zinc-900 bg-white text-2xl font-black leading-none"
+        >
+            ×
+        </button>
+    </div>
+
+    <div class="flex flex-1 flex-col px-4 py-6">
+        <div class="flex flex-col gap-3">
+            {navItems.map((item, index) => (
+                    <a
+                            href={routeTranslations[lang][item.key]}
+                            class:list={[
+                                "rounded-lg border-2 border-zinc-900 px-4 py-3 text-sm font-black uppercase tracking-widest transition-all",
+                                currentPath === routeTranslations[lang][item.key] || currentPath === routeTranslations[lang][item.key] + '/'
+                                    ? "bg-secondary-container text-zinc-900"
+                                    : "bg-white text-zinc-700 hover:bg-zinc-100",
+                            ]}
+                    >
+                        {item.label}
+                    </a>
+            ))}
+        </div>
+
+        <div class="mt-auto pt-6">
+            <button
+                    class="w-full border-2 border-zinc-900 bg-secondary-container px-6 py-3 text-xs font-black uppercase tracking-widest text-on-secondary-container transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none neubrutalism-shadow-small"
+            >
+                Get Started
+            </button>
+        </div>
+    </div>
+</aside>
+
+<script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const closeBtn = document.getElementById("menu-close");
+    const drawer = document.getElementById("mobile-drawer");
+    const overlay = document.getElementById("drawer-overlay");
+
+    const openMenu = () => {
+        drawer?.classList.remove("translate-x-full");
+        overlay?.classList.remove("pointer-events-none", "opacity-0");
+        overlay?.classList.add("opacity-100");
+        toggleBtn?.setAttribute("aria-expanded", "true");
+        drawer?.setAttribute("aria-hidden", "false");
+        document.documentElement.classList.add("overflow-hidden");
+    };
+
+    const closeMenu = () => {
+        drawer?.classList.add("translate-x-full");
+        overlay?.classList.add("pointer-events-none", "opacity-0");
+        overlay?.classList.remove("opacity-100");
+        toggleBtn?.setAttribute("aria-expanded", "false");
+        drawer?.setAttribute("aria-hidden", "true");
+        document.documentElement.classList.remove("overflow-hidden");
+    };
+
+    toggleBtn?.addEventListener("click", openMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+    });
+</script>

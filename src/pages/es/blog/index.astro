@@ -1,0 +1,83 @@
+---
+import InsightsFeaturedHero from '../../../components/insights/InsightsFeaturedHero.astro'
+import InsightsFilters from '../../../components/insights/InsightsFilters.astro'
+import InsightsArticlesGrid from '../../../components/insights/InsightsArticlesGrid.astro'
+import InsightsNewsletterCta from '../../../components/insights/InsightsNewsletterCta.astro'
+import es from '../../../content/i18n/insights.es.json'
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { getCollection } from 'astro:content';
+
+const t = es
+
+// Collect Spanish posts
+const allPosts = await getCollection('blog');
+const esPosts = allPosts
+    .filter(post => post.id.startsWith('es/'))
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Identify featured post: latest with featured: true, or fallback to latest
+const featuredEntry = esPosts.find(p => p.data.featured === true) || esPosts[0];
+
+const formatDate = (date: Date) => {
+    return date.toLocaleDateString('es-ES', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    }).toUpperCase();
+};
+
+const featuredPost = featuredEntry ? {
+    category: featuredEntry.data.category,
+    date: formatDate(featuredEntry.data.date),
+    title: featuredEntry.data.title,
+    description: featuredEntry.data.excerpt,
+    cta: "Leer insight completo",
+    href: `/es/blog/${featuredEntry.id.replace('es/', '')}`,
+    imageSrc: featuredEntry.data.imageSrc,
+    imageAlt: featuredEntry.data.imageAlt
+} : t.featured.post;
+
+const mappedArticles = esPosts.map(post => ({
+    title: post.data.title,
+    excerpt: post.data.excerpt,
+    category: post.data.category,
+    readTime: post.data.readTime,
+    href: `/es/blog/${post.id.replace('es/', '')}`,
+    imageSrc: post.data.imageSrc,
+    imageAlt: post.data.imageAlt,
+    categoryClass: post.data.categoryClass,
+    featured: post.data.featured
+}));
+
+// Extract unique categories for filters
+const categories = [...new Set(esPosts.map(post => post.data.category))];
+const dynamicFilters = [
+    { label: 'Todos', active: true },
+    ...categories.map(category => ({ label: category }))
+];
+
+---
+
+<MainLayout lang="es" title="Insights">
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <InsightsFeaturedHero
+                sectionLabel={t.featured.sectionLabel}
+                post={featuredPost}
+        />
+
+        <InsightsFilters
+                label={t.filters.label}
+                filters={dynamicFilters}
+        />
+
+        <InsightsArticlesGrid articles={mappedArticles}/>
+
+        <InsightsNewsletterCta
+                titleBefore={t.newsletter.titleBefore}
+                titleHighlight={t.newsletter.titleHighlight}
+                description={t.newsletter.description}
+                inputPlaceholder={t.newsletter.inputPlaceholder}
+                buttonText={t.newsletter.buttonText}
+        />
+    </main>
+</MainLayout>

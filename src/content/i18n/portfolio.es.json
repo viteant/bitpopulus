@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Portafolio"
+  },
+  "hero": {
+    "badge": "Arquitectando Legados Digitales",
+    "titleBefore": "DONDE LA ",
+    "titleHighlight": "ENERGÍA CINÉTICA",
+    "titleAfter": "SE ENCUENTRA CON EL CÓDIGO.",
+    "description": "BitPopulus es un venture studio de alto rendimiento especializado en SaaS de rápido escalamiento y ecosistemas de datos. No solo construimos; curamos experiencias digitales con precisión editorial.",
+    "statValue": "$240M+",
+    "statLabel": "Capital levantado por clientes"
+  },
+  "featuredSystems": {
+    "title": "Sistemas\nDestacados",
+    "main": {
+      "title": "Aether SaaS",
+      "description": "Una plataforma revolucionaria de orquestación cloud diseñada para latencia submilisegundo. Reconstruimos la infraestructura central desde cero.",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDleClhUvWPbqQlzBInmXbBgs2aH7-Oo4fFeYL8AFW_le5xzMSaudW_PEs9LNvZCytjtQZWZTiE3f4IyYb24nnAMefuS0Y4rSwnu9tCgJ62m21Eym7CY7lPmVNSnjSSmTwZOXWSp_fAaFd90gh9z0ET3Bh5YhWbQq651wTTZhNTZwj8MRWwSJ-P9F8ytmbitjcqIfm1sZCiJezWAaoapNZsfW5AJ1Ofslek-kJmcuxOTxNkRVG6cZi1e4Uvtus6_UkJZcOYQUNmloI",
+      "imageAlt": "Interfaz de Aether SaaS",
+      "tags": ["Infraestructura", "Tiempo real"]
+    },
+    "side": {
+      "title": "Nexus Data",
+      "description": "Motor de analítica predictiva que procesa 4TB de datos crudos por segundo con 99.9% de precisión.",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDR8uSYS_cviJt7hxwmYlyN0PweO0ZFEfmd-sTDTAopL_rgdQrFywePffiIeKnl3WKdR3u4TW0NLxJhyNb6PZMLNGWN2ZSzVYeMmtEbFvweTrvRwd5-XviawrZNmiqWVn68VUgton6WePStSSYlNafCgrtRe823w076h8w-QtPRq6tG3fZVJBZ6dZcNp_M7XeGNRHIatQHpIn0Md_ZXA3MShw437ZemJLiyWlpul2gZRt0ev9TievOvi-jnNurotQGdrsrLW1H07N4",
+      "imageAlt": "Visualización de Nexus Data",
+      "cta": "Ver caso de estudio"
+    }
+  },
+  "projectGrid": {
+    "filters": [
+      { "label": "Todos", "active": true },
+      { "label": "Estrategia" },
+      { "label": "Desarrollo" },
+      { "label": "Growth" },
+      { "label": "Escala" }
+    ],
+    "gridLabel": "Grid_View // 08 Proyectos",
+    "projects": [
+      {
+        "title": "Vortex Protocol",
+        "category": "Escala",
+        "sector": "Web3",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuANNH5WFvmGTYdZ0FYxcs9nRrGki5nah0Btp7DCePA_8YRXWc9502nFjnot81OGUvs2gLmI8_lzx09u4-2Iyhgq4yssuAlRT3l-5a2-ET3KcyPMXHyVy0Z_Fkg_ddUZK71fTdGh2earr4pkFugoW5gjD1B-Z3UnZOfJj_JCY_Wcq4IlWzkyMmt-KGDd5wz_3sptQ7tyQP3BIJIcIeSw126-7If_WI4M9-WH18U0CWa2-YZCqjVqywkkCZ7KurFf30IlzzWB5RVXSQA",
+        "imageAlt": "Proyecto 1",
+        "isNew": true
+      },
+      {
+        "title": "Structure OS",
+        "category": "Estrategia",
+        "sector": "Enterprise",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhjHh__1XuMVLRrKolzBSqnNn8aMUL8WlTYWL63vgZVe-6Ns2Bw5mKgcGa6FfFCu6aUOxatWn2endlTAGE-FuVEu8z18wEJKIKgg-4sOkm7n2gZC4Gv01JlBWDKJ7Drmf2C5WTz1HNB-Xfzg8usNNQHsfZ1bxz2f2B9oehYRiTVQBXEP1x67M3huwf6yYFzvFeIqrBUiO7jQUSrGpNjpAPqCqlcu5GUDDBbqqd5d6clGdjr6ZBeVODccTgrdG-NHHcgyasyauAa2A",
+        "imageAlt": "Proyecto 2"
+      },
+      {
+        "title": "Pulse Growth",
+        "category": "Growth",
+        "sector": "Fintech",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuA50oWPZyKLwc-a9syo63Y0eeGDEXxrgql2_vaKiUrkKDwIAVq6jHj3Uqbc5zahTgEz6TuiJ7AvnohbspdWxrZI4jDy-UoiEXJ0HLoJH6Kc8YAuFjnW4cpEFA7Nyf1P8O4KUSMv7wCC7opQYXiyOxpYQ1OSN2CRFLbqyDpWjNsrcy_uroKBuorDOlBWso5m3Gp1NOXshsEJrQcNI8ZzYT4RAbtLoc6OL1UZAxHnhc0njyO-KMkovNDu5i07Elw3hCSTfBHUhKVmas8",
+        "imageAlt": "Proyecto 3"
+      }
+    ]
+  },
+  "results": {
+    "stats": [
+      {
+        "value": "+400%",
+        "label": "Crecimiento promedio en ventures del portafolio",
+        "watermark": "GROWTH",
+        "valueClass": "text-[#FFD60A]"
+      },
+      {
+        "value": "120ms",
+        "label": "Reducción de latencia en sistemas core",
+        "watermark": "SPEED",
+        "valueClass": "text-tertiary-fixed"
+      },
+      {
+        "value": "1.2B",
+        "label": "Llamadas diarias a API gestionadas de forma segura",
+        "watermark": "SCALE",
+        "valueClass": "text-primary-container"
+      }
+    ],
+    "testimonial": {
+      "quote": "BitPopulus no solo construyó nuestra app; arquitectó una máquina de crecimiento que superó cada métrica que nos habíamos propuesto.",
+      "name": "Marcus Thorne",
+      "role": "CEO, Aether Systems",
+      "avatarSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAHWhZ4R_PCTONOX2RZ2OV_WUpN7cEqCw-Xt5dxYVU08Ll4mdVlS_nrKDGMQLFt68anFUB1VxLpRTs-mSCzlEIduhkflWcWW2w-1JeMFUdZwKbShsK5uYwTBKFNsLqOqfFOLRGg_8tzsF-oQ2XfDv0N9XshDZxBA3Qq2OP6f9FUeBzpw3xYChKigjrx1ra-kjPGr7_qpQCvKCwL4Z463fIHKOi_upLkpp0VDwTGqidxgVn0fA4L0nu6OLK04w8xxRICUlT34Wx3psA",
+      "avatarAlt": "Retrato del CEO"
+    }
+  },
+  "cta": {
+    "titleBefore": "¿LISTO PARA ",
+    "titleHighlight": "ESCALAR?",
+    "description": "Actualmente estamos aceptando nuevos ventures para el ciclo Q4. Asegura hoy tu consultoría de arquitectura.",
+    "buttons": [
+      {
+        "label": "Empezar a construir",
+        "variant": "dark"
+      },
+      {
+        "label": "Ver precios",
+        "variant": "accent"
+      }
+    ]
+  }
+}

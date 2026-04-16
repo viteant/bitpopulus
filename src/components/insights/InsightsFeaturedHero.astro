@@ -1,0 +1,68 @@
+---
+interface FeaturedPost {
+    category: string
+    date: string
+    title: string
+    description: string
+    cta: string
+    href: string
+    imageSrc: string
+    imageAlt: string
+}
+
+interface Props {
+    sectionLabel: string
+    post: FeaturedPost
+}
+
+const { sectionLabel, post } = Astro.props
+---
+
+<section class="mb-20 relative">
+    <div class="absolute -top-10 -left-10 w-40 h-40 kinetic-gradient opacity-10 rounded-full blur-3xl -z-10"></div>
+
+    <h2 class="text-xs font-black uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+        <span class="w-12 h-1 bg-primary"></span>
+        {sectionLabel}
+    </h2>
+
+    <article class="grid grid-cols-1 lg:grid-cols-12 gap-0 border-4 border-on-surface hard-shadow-lg overflow-hidden bg-surface-container-lowest">
+        <div class="lg:col-span-7 h-[400px] lg:h-auto overflow-hidden relative border-b-4 lg:border-b-0 lg:border-r-4 border-on-surface">
+            <img
+                    src={post.imageSrc}
+                    alt={post.imageAlt}
+                    class="w-full h-full object-cover"
+            />
+
+            <div class="absolute top-6 left-6">
+        <span class="px-4 py-1 bg-secondary-container text-on-secondary-container border-2 border-on-surface font-black uppercase text-xs hard-shadow">
+          {post.category}
+        </span>
+            </div>
+        </div>
+
+        <div class="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-center">
+            <time class="text-sm font-bold text-outline mb-4">{post.date}</time>
+
+            <h3 class="text-4xl lg:text-5xl font-black leading-none tracking-tighter mb-6">
+                {post.title}
+            </h3>
+
+            <p class="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                {post.description}
+            </p>
+
+            <div class="flex">
+                <a
+                        class="group flex items-center gap-2 text-xl font-black uppercase tracking-tighter hover:text-primary transition-colors"
+                        href={post.href}
+                >
+                    {post.cta}
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">
+            arrow_forward
+          </span>
+                </a>
+            </div>
+        </div>
+    </article>
+</section>

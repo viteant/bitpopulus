@@ -1,17 +1,17 @@
 ---
-import HeroSection from "../components/sections/HeroSection.astro";
-import ProblemsSection from "../components/sections/ProblemsSection.astro";
-import ScalingEngineSection from "../components/sections/ScalingEngineSection.astro";
-import PillarsSection from "../components/sections/PillarsSection.astro";
-import PortfolioSection from "../components/sections/PortfolioSection.astro";
-import InsightsSection from "../components/sections/InsightsSection.astro";
-import FinalCtaSection from "../components/sections/FinalCtaSection.astro";
-import MainLayout from "../layouts/MainLayout.astro";
-import content from "../content/i18n/home.en.json";
+import HeroSection from "../../components/sections/HeroSection.astro";
+import ProblemsSection from "../../components/sections/ProblemsSection.astro";
+import ScalingEngineSection from "../../components/sections/ScalingEngineSection.astro";
+import PillarsSection from "../../components/sections/PillarsSection.astro";
+import PortfolioSection from "../../components/sections/PortfolioSection.astro";
+import InsightsSection from "../../components/sections/InsightsSection.astro";
+import FinalCtaSection from "../../components/sections/FinalCtaSection.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import content from "../../content/i18n/home.es.json";
 
 ---
 
-<MainLayout lang="en" title={content.seo.title}>
+<MainLayout lang="es" title={content.seo.title}>
     <HeroSection
             badge={content.hero.badge}
             titleBefore={content.hero.titleBefore}

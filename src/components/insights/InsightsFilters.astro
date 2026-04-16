@@ -1,0 +1,62 @@
+---
+interface FilterItem {
+    label: string
+    active?: boolean
+}
+
+interface Props {
+    label: string
+    filters: FilterItem[]
+}
+
+const { label, filters } = Astro.props
+---
+
+<section class="mb-12">
+    <div class="flex flex-wrap items-center gap-4">
+        <span class="text-sm font-black uppercase tracking-tighter mr-2">{label}</span>
+
+        {filters.map((filter) => (
+                <button
+                        type="button"
+                        data-filter={filter.label}
+                        class={`filter-btn px-6 py-2 border-2 border-on-surface font-bold uppercase text-sm transition-all ${
+                            filter.active
+                                ? 'bg-on-surface text-surface hard-shadow active-filter'
+                                : 'bg-surface text-on-surface hover:bg-surface-container'
+                        }`}
+                >
+                    {filter.label}
+                </button>
+        ))}
+    </div>
+</section>
+
+<script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = (button as HTMLButtonElement).dataset.filter;
+            
+            // Update active styles
+            filterButtons.forEach(btn => {
+                btn.classList.remove('bg-on-surface', 'text-surface', 'hard-shadow', 'active-filter');
+                btn.classList.add('bg-surface', 'text-on-surface');
+            });
+            button.classList.add('bg-on-surface', 'text-surface', 'hard-shadow', 'active-filter');
+            button.classList.remove('bg-surface', 'text-on-surface');
+
+            // Filter articles
+            articleCards.forEach(card => {
+                const category = (card as HTMLElement).dataset.category;
+                if (filter === 'Todos' || filter === 'All' || category === filter) {
+                    (card as HTMLElement).style.display = 'flex';
+                } else {
+                    (card as HTMLElement).style.display = 'none';
+                }
+            });
+        });
+    });
+</script>

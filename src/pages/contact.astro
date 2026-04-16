@@ -1,0 +1,41 @@
+---
+import ContactHero from '../components/contact/ContactHero.astro'
+import ContactForm from '../components/contact/ContactForm.astro'
+import ContactInfoCards from '../components/contact/ContactInfoCards.astro'
+import ContactSocialLinks from '../components/contact/ContactSocialLinks.astro'
+import ContactDecorativeCard from '../components/contact/ContactDecorativeCard.astro'
+
+import en from '../content/i18n/contact.en.json'
+import MainLayout from "../layouts/MainLayout.astro";
+
+const t = en
+---
+<MainLayout lang="en" title="Contact">
+<main class="pt-32 pb-24 px-6 md:px-8 max-w-7xl mx-auto">
+    <ContactHero
+            title={t.hero.title}
+            accent={t.hero.accent}
+            description={t.hero.description}
+    />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div class="lg:col-span-7">
+            <ContactForm
+                    fields={t.form.fields as any}
+                    submitText={t.form.submitText}
+            />
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-8">
+            <ContactInfoCards items={t.infoCards.items} />
+            <ContactSocialLinks title={t.socials.title} items={t.socials.items} />
+            <ContactDecorativeCard
+                    imageSrc={t.decorativeCard.imageSrc}
+                    imageAlt={t.decorativeCard.imageAlt}
+                    status={t.decorativeCard.status}
+                    title={t.decorativeCard.title}
+            />
+        </div>
+    </div>
+</main>
+</MainLayout>

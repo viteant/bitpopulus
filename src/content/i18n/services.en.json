@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Services"
+  },
+  "hero": {
+    "title": "Services",
+    "description": "BitPopulus is not an agency, it is an",
+    "highlight": "integrated system",
+    "badgeText": "Total Business Synchrony"
+  },
+  "categoriesGrid": {
+    "items": [
+      {
+        "title": "Product Development",
+        "description": "Strategy, Design, and Product Validation.",
+        "icon": "rocket_launch",
+        "color": "#6A00F4"
+      },
+      {
+        "title": "Presence & Growth",
+        "description": "Marketing, SEO, and User Acquisition.",
+        "icon": "trending_up",
+        "color": "#B5179E"
+      },
+      {
+        "title": "Automation & Data",
+        "description": "AI, Workflows, and Data Intelligence.",
+        "icon": "memory",
+        "color": "#FF7A00"
+      },
+      {
+        "title": "Engineering & Architecture",
+        "description": "Robust software, APIs, and cloud infrastructure.",
+        "icon": "architecture",
+        "color": "#2F343C"
+      }
+    ]
+  },
+  "categoryOne": {
+    "coreLabel": "Core 01",
+    "title": "Product Development & Digital Strategy",
+    "description": "We build the foundation of your digital business. From concept to market validation.",
+    "items": [
+      {
+        "label": "Design",
+        "icon": "straighten"
+      },
+      {
+        "label": "Business Architecture",
+        "icon": "account_tree"
+      },
+      {
+        "label": "Validation",
+        "icon": "fact_check"
+      },
+      {
+        "label": "Strategic Roadmap",
+        "icon": "map"
+      }
+    ]
+  },
+  "categoryTwo": {
+    "coreLabel": "Core 02",
+    "title": "Presence, Brand, and Digital Growth",
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCVZOruZqUKrps9wteiCRFT_vS3uXWxPRuZpn5oZUatBQP47y-hJWKF0GbLbWo-DM8DR7MfCu8l0HlETHTUHKwzzNc0VLnqzyNVLNmxNyDA0tL--6nmnbGkxAbkGM1U2lBr4eHTj-2rok0dpvbLE6Jc3M5u2HbbyjM8FAzN5IWsBTnqtAp5nWfMZIPyuLNJoFuLKXPohO4PdGyAaz_2eBOEaGXbryQ3gPJbYRxYzIESf5aG4Es14N_tJNdFGcqWWwLN0YWG_-EqRk",
+    "imageAlt": "close-up of a sleek futuristic digital interface with glowing amber elements on a dark background",
+    "items": [
+      {
+        "title": "Web Dev",
+        "description": "High-fidelity digital experiences built for performance."
+      },
+      {
+        "title": "Branding",
+        "description": "A visual identity that cuts through the noise."
+      },
+      {
+        "title": "Social Media",
+        "description": "Content that builds community and authority."
+      },
+      {
+        "title": "Acquisition",
+        "description": "Paid traffic channels optimized for ROI."
+      },
+      {
+        "title": "Funnel Optimization",
+        "description": "Turning users into customers at speed."
+      },
+      {
+        "title": "SEO & CRO",
+        "description": "Organic visibility and conversion optimization."
+      }
+    ]
+  },
+  "categoryThree": {
+    "coreLabel": "Core 03",
+    "title": "Automation, Data, and Intelligence",
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDHKdwqFhuMysj6sLhOV23DcZsn6kaHLgphVojZ7g6DlZwcDmHXYBvq48TMeYcZwy7zeIX5xzVkEuK7CGrpOXWElbKIfpEU6f-wo6bV81abF8eTnWtSUxfmtpaffCuZAkPfmxorDwjknKRCIU84AOTjUEe5AcEs_TfEBWGC01zBwSuCVF4mj08VVniyl4YoYWF5Vz6Gp9ITAueHdQMKWpKRo141mHJAxnH9hzKhcaOalxwxeE4_lf5cocwiPauS2_f6Q_WAfb1gYLo",
+    "imageAlt": "abstract visualization of neural networks and data processing with orange and purple light trails",
+    "items": [
+      {
+        "number": "01",
+        "title": "Automation & AI",
+        "description": "LLM integration and autonomous workflow design."
+      },
+      {
+        "number": "02",
+        "title": "Custom Integrations",
+        "description": "We connect your tool ecosystem without friction."
+      },
+      {
+        "number": "03",
+        "title": "Data Architecture",
+        "description": "Decisions based on evidence, not intuition."
+      }
+    ]
+  },
+  "categoryFour": {
+    "coreLabel": "Core 04",
+    "title": "Software Engineering and Architecture",
+    "description": "Massive scalability and enterprise-grade security.",
+    "items": [
+      {
+        "label": "Development",
+        "icon": "code"
+      },
+      {
+        "label": "Architecture",
+        "icon": "schema"
+      },
+      {
+        "label": "APIs",
+        "icon": "api"
+      },
+      {
+        "label": "Data",
+        "icon": "database"
+      },
+      {
+        "label": "Performance",
+        "icon": "bolt"
+      },
+      {
+        "label": "Infra",
+        "icon": "cloud"
+      },
+      {
+        "label": "Security",
+        "icon": "encrypted"
+      }
+    ]
+  },
+  "connections": {
+    "title": "How they connect",
+    "descriptionBefore": "Our value does not live in isolated execution, but in the ",
+    "highlightedWord": "intersection",
+    "descriptionAfter": ". Where data feeds the product, the product scales the brand, and engineering sustains growth.",
+    "icons": ["all_inclusive", "cyclone", "sync_alt"]
+  },
+  "cta": {
+    "title": "Ready to Scale?",
+    "buttonText": "Let’s talk today"
+  }
+}

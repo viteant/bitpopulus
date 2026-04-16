@@ -1,0 +1,55 @@
+---
+interface Props {
+    badge: string
+    titleBefore: string
+    titleHighlight: string
+    titleAfter: string
+    description: string
+    statValue: string
+    statLabel: string
+}
+
+const {
+    badge,
+    titleBefore,
+    titleHighlight,
+    titleAfter,
+    description,
+    statValue,
+    statLabel
+} = Astro.props
+---
+
+<section class="px-8 py-24 md:py-32 max-w-7xl mx-auto overflow-hidden">
+    <div class="relative">
+        <div class="absolute -top-20 -left-20 w-64 h-64 bg-primary-container opacity-5 blur-[100px] rounded-full"></div>
+
+        <div class="relative z-10">
+      <span class="inline-block px-4 py-1 mb-6 text-xs font-black uppercase tracking-[0.2em] bg-secondary-container border-2 border-black hard-shadow">
+        {badge}
+      </span>
+
+            <h1 class="text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter text-on-surface mb-8">
+                {titleBefore}
+                <span class="bg-gradient-to-r from-[#6A00F4] via-[#B5179E] to-[#FF7A00] bg-clip-text text-transparent">
+          {titleHighlight}
+        </span>
+                <br />
+                {titleAfter}
+            </h1>
+
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-medium leading-relaxed">
+                    {description}
+                </p>
+
+                <div class="border-l-4 border-[#FF7A00] pl-6 py-2">
+                    <div class="text-4xl font-black text-on-surface">{statValue}</div>
+                    <div class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">
+                        {statLabel}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

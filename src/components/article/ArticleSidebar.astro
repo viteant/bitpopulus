@@ -1,0 +1,64 @@
+---
+interface RelatedItem {
+    title: string
+    category: string
+    href: string
+    imageSrc: string
+    imageAlt: string
+    categoryClass: string
+}
+
+interface Props {
+    relatedTitle: string
+    relatedItems: RelatedItem[]
+    tagsTitle: string
+    tags: string[]
+}
+
+const { relatedTitle, relatedItems, tagsTitle, tags } = Astro.props
+---
+
+<aside class="lg:col-span-4 space-y-12">
+    <div class="sticky top-28">
+        <div class="flex items-center gap-3 mb-8">
+            <h3 class="text-2xl font-black uppercase tracking-tighter">{relatedTitle}</h3>
+            <div class="flex-1 h-1 kinetic-gradient"></div>
+        </div>
+
+        <div class="space-y-8">
+            {relatedItems.map((item) => (
+                    <a class="group block" href={item.href}>
+                        <div class="relative mb-4">
+                            <div class="aspect-video border-2 border-zinc-900 rounded-lg overflow-hidden neubrutal-shadow-sm transition-transform group-hover:-translate-y-1">
+                                <img
+                                        src={item.imageSrc}
+                                        alt={item.imageAlt}
+                                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                />
+                            </div>
+
+                            <span class={`absolute top-2 right-2 border-2 border-zinc-900 px-2 py-0.5 text-[10px] font-black uppercase ${item.categoryClass}`}>
+              {item.category}
+            </span>
+                        </div>
+
+                        <h4 class="text-lg font-black leading-tight group-hover:text-[#6A00F4] transition-colors">
+                            {item.title}
+                        </h4>
+                    </a>
+            ))}
+        </div>
+
+        <div class="mt-12">
+            <p class="font-black uppercase text-xs tracking-widest text-zinc-400 mb-6">{tagsTitle}</p>
+
+            <div class="flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                        <span class="px-3 py-1 border-2 border-zinc-900 rounded-full font-bold text-sm bg-white hover:bg-zinc-100 cursor-pointer transition-colors">
+            {tag}
+          </span>
+                ))}
+            </div>
+        </div>
+    </div>
+</aside>

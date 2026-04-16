@@ -1,0 +1,50 @@
+---
+import PortfolioHero from '../components/portfolio/PortfolioHero.astro'
+import PortfolioFeaturedSystems from '../components/portfolio/PortfolioFeaturedSystems.astro'
+import PortfolioProjectGrid from '../components/portfolio/PortfolioProjectGrid.astro'
+import PortfolioResults from '../components/portfolio/PortfolioResults.astro'
+import PortfolioFinalCta from '../components/portfolio/PortfolioFinalCta.astro'
+
+import en from '../content/i18n/portfolio.en.json'
+import MainLayout from "../layouts/MainLayout.astro";
+
+const t = en
+---
+
+<MainLayout lang="en" title="Portfolio">
+    <main>
+        <PortfolioHero
+                badge={t.hero.badge}
+                titleBefore={t.hero.titleBefore}
+                titleHighlight={t.hero.titleHighlight}
+                titleAfter={t.hero.titleAfter}
+                description={t.hero.description}
+                statValue={t.hero.statValue}
+                statLabel={t.hero.statLabel}
+        />
+
+        <PortfolioFeaturedSystems
+                title={t.featuredSystems.title}
+                main={t.featuredSystems.main}
+                side={t.featuredSystems.side}
+        />
+
+        <PortfolioProjectGrid
+                filters={t.projectGrid.filters}
+                gridLabel={t.projectGrid.gridLabel}
+                projects={t.projectGrid.projects}
+        />
+
+        <PortfolioResults
+                stats={t.results.stats}
+                testimonial={t.results.testimonial}
+        />
+
+        <PortfolioFinalCta
+                titleBefore={t.cta.titleBefore}
+                titleHighlight={t.cta.titleHighlight}
+                description={t.cta.description}
+                buttons={t.cta.buttons as any}
+        />
+    </main>
+</MainLayout>

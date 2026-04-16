@@ -1,0 +1,69 @@
+---
+interface ArticleItem {
+    title: string
+    excerpt: string
+    category: string
+    readTime: string
+    href: string
+    imageSrc: string
+    imageAlt: string
+    categoryClass: string
+    featured?: boolean
+}
+
+interface Props {
+    articles: ArticleItem[]
+}
+
+const { articles } = Astro.props
+---
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {articles.map((article) => {
+        const outerClass = article.featured
+            ? 'bg-surface-container-lowest border-4 border-on-surface hard-shadow flex flex-col kinetic-gradient p-[4px] hover:-translate-x-1 hover:-translate-y-1 transition-all'
+            : 'bg-surface-container-lowest border-4 border-on-surface hard-shadow flex flex-col hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(23,28,35,1)] transition-all'
+
+        const innerClass = article.featured
+            ? 'bg-surface-container-lowest flex flex-col h-full'
+            : 'flex flex-col h-full'
+
+        return (
+                <article 
+                    class={`${outerClass} article-card`}
+                    data-category={article.category}
+                >
+                    <div class={innerClass}>
+                        <div class="h-56 relative border-b-4 border-on-surface overflow-hidden">
+                            <img
+                                    src={article.imageSrc}
+                                    alt={article.imageAlt}
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+
+                            <span class={`absolute bottom-4 left-4 px-3 py-1 border-2 border-on-surface font-black uppercase text-[10px] hard-shadow ${article.categoryClass}`}>
+              {article.category}
+            </span>
+                        </div>
+
+                        <div class="p-6 flex-grow">
+                            <h4 class="text-xl font-black mb-3 leading-tight tracking-tight">{article.title}</h4>
+
+                            <p class="text-on-surface-variant text-sm mb-6 line-clamp-3">{article.excerpt}</p>
+
+                            <div class="flex justify-between items-center mt-auto">
+                                <span class="text-xs font-bold text-outline">{article.readTime}</span>
+
+                                <a
+                                        class="material-symbols-outlined text-on-surface hover:text-primary transition-colors"
+                                        href={article.href}
+                                >
+                                    arrow_right_alt
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        )
+    })}
+</section>

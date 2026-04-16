@@ -1,0 +1,36 @@
+---
+interface DifferentiatorItem {
+    title: string
+    description: string
+    icon: string
+    iconBgClass: string
+}
+
+interface Props {
+    title: string
+    items: DifferentiatorItem[]
+}
+
+const { title, items } = Astro.props
+---
+
+<section class="px-8 py-24 bg-surface">
+    <div class="max-w-screen-xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 underline decoration-primary decoration-8 underline-offset-8">
+            {title}
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {items.map((item) => (
+                    <div class="group bg-white border-[3px] border-on-surface p-8 hard-shadow hover:translate-y-[-8px] transition-transform">
+                        <div class={`w-12 h-12 mb-6 flex items-center justify-center border-2 border-on-surface ${item.iconBgClass}`}>
+                            <span class="material-symbols-outlined">{item.icon}</span>
+                        </div>
+
+                        <h4 class="text-xl font-black mb-4">{item.title}</h4>
+                        <p class="text-sm leading-relaxed text-on-surface-variant">{item.description}</p>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

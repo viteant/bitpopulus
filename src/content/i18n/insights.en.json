@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Insights"
+  },
+  "featured": {
+    "sectionLabel": "Featured Insights",
+    "post": {
+      "category": "Strategy",
+      "date": "OCTOBER 24, 2024",
+      "title": "Navigating the Great Decoupling of Tech Infrastructure",
+      "description": "In an era defined by rapid architectural shifts, we explore how modern enterprises are rebuilding their foundations to sustain hyper-growth without the legacy bloat.",
+      "cta": "Read Full Insight",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmNMKZL4BhlCWgQ83DbfbR05jGXgvtnajA-NY6Gx9wIDkic-cR1DySRYvA6bKXQAANrAJZjUBDO8VMZh3lNb0WwiQ3omzzuGRz0rpNYiB9fwoJXaRR0HV5PhxHuWFvl-ooBxKBnbh8VpoGOqSNeGfidCb5ggEYeiI0WLY54CV8uCXmjpWKEkFKDjZmxlAWjHEvsCI3Nd960DlFgd57wM14zenkKHzJfACPRkcrDuhPEd562ut3nEIKLhCGgXCw6qYY9E2Wtzg5hbc",
+      "imageAlt": "Featured post cover"
+    }
+  },
+  "filters": {
+    "label": "Filter by:",
+    "items": [
+      { "label": "All", "active": true },
+      { "label": "Strategy" },
+      { "label": "Tech" },
+      { "label": "Growth" },
+      { "label": "Scale" }
+    ]
+  },
+  "articles": [
+    {
+      "title": "The Quantum Leap: Preparing for Post-Quantum Encryption",
+      "excerpt": "The clock is ticking on current encryption standards. Here is how leading CTOs are retooling their security stacks today.",
+      "category": "Tech",
+      "readTime": "5 MIN READ",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCyfD2kxiaio3Arog2Ny-Ai-UivXCZ4gqWeX1JypIpGU3fP992kmkt3GItfPAX1_aJYpBz-PpTY5gTkBx86VuNF5MYGeeGkefN0v0RokO49ruBEX67VderQgSxswIzjNdEuBKHa0hmIJICrIlmv7oS8TWfXx-rr90ok9qOXp3zcmDiofysxmbuUogveJUbp3qJoXpIMIBVAe-uQ1apDDNEZ4l0dz-rVKqa2WcdVw-Ha9ZicegukSxVaYxiSFn1pBfZEEmTtV9KhKKc",
+      "imageAlt": "Cybersecurity article",
+      "categoryClass": "bg-tertiary-fixed text-on-tertiary-fixed"
+    },
+    {
+      "title": "Retention is the New Acquisition: The LTV Revolution",
+      "excerpt": "Stop burning cash on top-of-funnel acquisition. We analyze the unit economics of the world's most successful subscription models.",
+      "category": "Growth",
+      "readTime": "8 MIN READ",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZQVF8TVUlXyIU9bT1QiMexF2h6jJ14WGRQw0puQgtMSatd0Q-7pylKSrL8KZ6htwMM3Gp-3n99wLAS4eZjzkHwL_uNPXc2D5jaj8r8yZyTmuNr2Pkb2YeyQWPbvddeVOOfkrs_H56IMUPVuaa3aON32V2Bz-cOxJK7hJNn3iTlUYpiHU7Rf7fp5MTw6_jYf73R9xBAU36Xea-gcYsCFgdOtN89A6tZdzmZvRXXwdcku91dco0k7D_YHE7XNatlgEoU-fShC5Rpnc",
+      "imageAlt": "Growth article",
+      "categoryClass": "bg-secondary-container text-on-secondary-container"
+    },
+    {
+      "title": "The Death of the Minimalist Logo? Why Brands are Getting Weird",
+      "excerpt": "The age of 'blanding' is over. Maximum impact, vibrant colors, and expressive typography are reclaiming the digital landscape.",
+      "category": "Culture",
+      "readTime": "6 MIN READ",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCdOHoyBwrsPlQ4yUy86WJxpegIX_pEeKYM_AfxLILdTWfRqerEa88LADLYQ-Cx_LALD7iPWhh31bZxYBgAnQEmjBqjIMnj64MioX_8_wf5ZO85PJgetaSQs1svbxMqaYqksPZYRp5YBGsOxXBE7RqSPOtKlcDnpDUAb0RLWKyjwc1V_X04k8F2sq8-ul4YieGURfvSLcwk-OH2nsp66xVDKGm3QqnQoizDZwsiqMMO4oiiTtERwC7I29UXavhybKSMkp5p7HFDx4",
+      "imageAlt": "Design article",
+      "categoryClass": "bg-white text-black",
+      "featured": true
+    },
+    {
+      "title": "The 10x Operational Framework: Scale Without Chaos",
+      "excerpt": "Systems thinking for the modern founder. How to build processes that evolve faster than your headcount.",
+      "category": "Scale",
+      "readTime": "12 MIN READ",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAolT4Cr-iLBI9MLpM7-wD7W96B786QlBwbjZKqjM3Mxl6mlGUHdRWmaqnWMAEhZFfx3In4Axela7vRKsbjVPHWstDzAVqG5XtWxv6FQcJngiuBxIDBk1E_uxMz6rtM9_nkfSgHyRZ7vb-K3bqT3G_X9WmKlEmPDN87HeF7VRO806IlJY6xkbHMSgqe74W3WtLUGcOBlRKvcufeTel_iMSt1NpspdbxTy5uKwGjax3DCxMbZOJNTqrRkpvY0v53mQZh_vzZb5LV_sU",
+      "imageAlt": "Scale article",
+      "categoryClass": "bg-tertiary-fixed text-on-tertiary-fixed"
+    },
+    {
+      "title": "Web4 and the Internet of Value: Beyond the Hype",
+      "excerpt": "Unpacking the actual utility of decentralized autonomous organizations in global supply chain management.",
+      "category": "Tech",
+      "readTime": "10 MIN READ",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAbA7hOCOKNhDxuRk-0TJEob4Z8Eh38merGdYO_h0WzcDRG7bZpD1QNTOj8GAc9tmFchvt0UUx2Eayt6puN5gS962PXbK6QPIggcPfbU_yExcF676IlrltStDEYyeTAwn8paCD5DYCVAZCSO0jrc7LdDWk82bM-QeQT3SoQnbpG3p_6k9HQdy3FGwxIfrmf4tqsG5FD-Xgg-t1M_-6_AZMmyiEFxAgPSooIArkRh248LmsHQMzKEh_DfVr9O1p4e2x3MIve6tWLmbE",
+      "imageAlt": "Future tech article",
+      "categoryClass": "bg-tertiary-fixed text-on-tertiary-fixed"
+    },
+    {
+      "title": "The Executive's Guide to Radical Transparency",
+      "excerpt": "Why the most successful companies are opening their playbooks and sharing internal metrics with the world.",
+      "category": "Strategy",
+      "readTime": "7 MIN READ",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBxiUT99Xkg_I8A_HG8yXyzs72QO3LVfVZNkBGV5mFz05qJOYhtvu716XqOg5TLJ2MWI2AG0yj9QsiKsKDOT_26pSR8W7T4U7xx9QFKJ2OQ9_SICP4ABNV2pFWz8ugNz2waVqnZIg6CxLyHa-0mWjfsAzCrLVZTdkrNpsM3SaPsFgMTCw1Kf3ZUj8Lrj1GHCwW5oYLJDyVu0pcwAdogj3YZ2lezASo3J4nT9GJ8aPzE8i58BIbu8XVFp4srCCjSVB7LqTPg97NNcpc",
+      "imageAlt": "Culture article",
+      "categoryClass": "bg-secondary-container text-on-secondary-container"
+    }
+  ],
+  "newsletter": {
+    "titleBefore": "JOIN THE ",
+    "titleHighlight": "POPULUS",
+    "description": "Weekly breakdowns of the tech, culture, and strategy driving the next century of growth. No fluff. Just kinetic insights.",
+    "inputPlaceholder": "YOUR@EMAIL.COM",
+    "buttonText": "JOIN"
+  }
+}

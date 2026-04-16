@@ -1,0 +1,83 @@
+---
+interface FieldItem {
+    name: string
+    label: string
+    placeholder: string
+    type?: string
+    tag?: 'input' | 'textarea'
+    rows?: number
+}
+
+interface Props {
+    fields: FieldItem[]
+    submitText: string
+    formAction?: string
+    formMethod?: string
+}
+
+const {
+    fields,
+    submitText,
+    formAction = '#',
+    formMethod = 'post'
+} = Astro.props
+---
+
+<form
+        action={formAction}
+        method={formMethod}
+        class="bg-surface-container-lowest p-8 md:p-12 border-4 border-on-surface shadow-[12px_12px_0px_0px_rgba(23,28,35,1)] rounded-xl"
+>
+    <div class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {fields.slice(0, 2).map((field) => (
+                    <div class="space-y-2">
+                        <label class="text-label-md font-black uppercase tracking-widest text-on-surface-variant" for={field.name}>
+                            {field.label}
+                        </label>
+
+                        <input
+                                id={field.name}
+                                name={field.name}
+                                type={(field.type ?? 'text') as astroHTML.JSX.HTMLInputTypeAttribute}
+                                placeholder={field.placeholder}
+                                class="w-full bg-surface border-2 border-outline rounded-sm p-4 focus:ring-0 focus:border-primary-container focus:shadow-[4px_4px_0px_0px_rgba(106,0,244,1)] transition-all outline-none"
+                        />
+                    </div>
+            ))}
+        </div>
+
+        {fields.slice(2).map((field) => (
+                <div class="space-y-2">
+                    <label class="text-label-md font-black uppercase tracking-widest text-on-surface-variant" for={field.name}>
+                        {field.label}
+                    </label>
+
+                    {field.tag === 'textarea' ? (
+                            <textarea
+                                    id={field.name}
+                                    name={field.name}
+                                    rows={field.rows ?? 4}
+                                    placeholder={field.placeholder}
+                                    class="w-full bg-surface border-2 border-outline rounded-sm p-4 focus:ring-0 focus:border-primary-container focus:shadow-[4px_4px_0px_0px_rgba(106,0,244,1)] transition-all outline-none"
+                            />
+                    ) : (
+                            <input
+                                    id={field.name}
+                                    name={field.name}
+                                    type={(field.type ?? 'text') as astroHTML.JSX.HTMLInputTypeAttribute}
+                                    placeholder={field.placeholder}
+                                    class="w-full bg-surface border-2 border-outline rounded-sm p-4 focus:ring-0 focus:border-primary-container focus:shadow-[4px_4px_0px_0px_rgba(106,0,244,1)] transition-all outline-none"
+                            />
+                    )}
+                </div>
+        ))}
+
+        <button
+                class="w-full md:w-auto signature-gradient text-white text-lg font-black py-4 px-12 border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(23,28,35,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all uppercase tracking-widest"
+                type="submit"
+        >
+            {submitText}
+        </button>
+    </div>
+</form>

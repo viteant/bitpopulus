@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "El auge del kinetic computing en 2024"
+  },
+  "header": {
+    "category": "Evolución Tech",
+    "readTime": "8 min de lectura",
+    "titleBefore": "EL AUGE DEL ",
+    "titleHighlight": "KINETIC COMPUTING",
+    "titleAfter": " EN 2024.",
+    "author": {
+      "label": "Escrito por",
+      "name": "Elara Vance",
+      "avatarSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDnOmXPjNqdTgzX9iIoOCxgJh6OOVwGxqSd0c59YFlpRpev_GElR2VprmwBDttwayjonBb9QflKBqFWaXqzHxyizKtPzhrEuIGsQaT8m4d88vNqgNvuQDULFOVp1-csCfzCcLI1ZLweFyP-RF08Vl2gVJBSnmzd-fNCJgS4TiQAOkJuv6XogQ2dETZGpW_ZGzKtU5iuvpNXcp5W8X0vg9Ci1K_hO__kkSrous9z6YG41uvlQlGat7UNsgOQFApEExtOqYVyg8vIMJU",
+      "avatarAlt": "Avatar del autor"
+    },
+    "actions": [
+      {
+        "type": "icon",
+        "icon": "share"
+      },
+      {
+        "type": "icon",
+        "icon": "bookmark"
+      },
+      {
+        "type": "button",
+        "icon": "chat_bubble",
+        "label": "42 comentarios"
+      }
+    ]
+  },
+  "featuredMedia": {
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDIlPPgRnkDgzng_uw-uC-ozxpG-nRM10bYV5crIaAqZffGRZK12PAStMO7p8CgqBGYHMP6k2BYWjzRnETqnOrBnd4drtIs8Rg9_XfKtG9VnRqiv8a7eKIJTJEa8-x4p2i1WDr40JQnCWTFEpBSaFkwOcUzzwG9GZSXWsTVEB1Z_ZoQozvdk5q0LbLtMgzUrJMpB4oHYmyUOSAF2bL2TiCZFMI8-KeoXuQDt2K_0ToJdHoevA27NrB2D1Ncq-NR-BF_HCQZBHranQ4",
+    "imageAlt": "Fondo tecnológico abstracto",
+    "figure": {
+      "label": "Fig 01.",
+      "caption": "Visualización de nodos de datos descentralizados interactuando dentro del ecosistema de BitPopulus."
+    }
+  },
+  "body": {
+    "intro": "El paradigma de la interacción de usuario está cambiando. Ya no somos observadores pasivos de interfaces estáticas; estamos entrando en una era de \"Kinetic Computing\", donde la UI anticipa la intención humana mediante retroalimentación biométrica y contexto ambiental.",
+    "sectionTitle": "La arquitectura del flujo",
+    "paragraph": "BitPopulus ha estado al frente de esta transición, desarrollando un motor propietario que trata los componentes de UI como entidades físicas. Estos elementos reaccionan al impulso del cursor, a la velocidad del scroll e incluso al \"peso\" del contenido que contienen. No se trata solo de estética; se trata de neuroergonomía.",
+    "quote": {
+      "quote": "La meta no es hacer software que funcione. La meta es hacer software que respire junto al usuario.",
+      "cite": "Dr. Julian Thorne, CTO"
+    },
+    "subTitle": "Feedback táctil en un mundo digital",
+    "paragraphAfterQuote": "Al aplicar principios neubrutalistas, sombras duras, trazos gruesos y colores de alto contraste, le damos al cerebro los anclajes visuales que necesita para procesar información compleja con rapidez. En nuestra última construcción editorial implementamos:",
+    "checklist": [
+      {
+        "text": "Percepción dinámica de profundidad usando sombras con offset duro."
+      },
+      {
+        "text": "Grillas asimétricas que reducen la fatiga visual."
+      },
+      {
+        "text": "Peso tipográfico variable según la velocidad de lectura."
+      },
+      {
+        "text": "Gradientes de identidad para puntos de enfoque semántico."
+      }
+    ]
+  },
+  "inlineCta": {
+    "title": "¿Listo para evolucionar tu workflow?",
+    "description": "Únete a más de 15,000 pioneros que reciben nuestro Kinetic Briefing semanal.",
+    "inputPlaceholder": "email@address.com",
+    "buttonText": "Unirme"
+  },
+  "sidebar": {
+    "relatedTitle": "Insights relacionados",
+    "relatedItems": [
+      {
+        "title": "La paradoja retrofuturista: por qué miramos atrás para avanzar.",
+        "category": "Cultura",
+        "href": "#",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWynRkmsm1Ytvlk0rok51_V_A3BfA-OuxcBVA6HkPB9-zcF4YRtPT46J_XSoSN6BaXnxohQxhv0gYM5iven5I2PwomyYOIyMcjsPWqde6lvGKO-j56Md1rYqu0Xni6fQCXXPqx51isZE6I1mmzSzz-XLxDrL6YqeVHwPDa0XvqU6Xx-1ccko_0KxaVZ-c-RPSMnE8wOilZQDCmfVZYGSqS1iN_IJjKLsQZbz_Pd0o8iQ3CnKyb7__E6hvZb9V5hVfjrGUQ9FEKKlo",
+        "imageAlt": "Tecnología vintage",
+        "categoryClass": "bg-[#FFD60A]"
+      },
+      {
+        "title": "Editorial descentralizado: la muerte del gatekeeper.",
+        "category": "Futuro",
+        "href": "#",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuClAV_av6ZvF4_PyjvqpgAngGFwl2MahYHnbE8Bie8bY8NR4xwPdcYE9LaPMBVV_xIR5IuLVQoUkYWiok1xKQ4nJKtDQQNIGcwyuqoxCK7uAlY3qBnseSZTCwpWQn6KBF6RuYdjPP98UtbMgzCHlMoUmHq3U7PlQZq2XwyrZ4b9kPnHP9njawMWv-um1m09spOReOENMfRQwXpqD_0a27gqRXuEHtFaoJ5ZrGg2-JGcuHEmLevxsZYfXxZ-_fHftQt5C9yLBPDCBok",
+        "imageAlt": "Red global",
+        "categoryClass": "bg-tertiary-fixed"
+      }
+    ],
+    "tagsTitle": "Tags en tendencia",
+    "tags": [
+      "#Computing",
+      "#UX",
+      "#FutureTech",
+      "#DesignSystem",
+      "#Ai"
+    ]
+  }
+}

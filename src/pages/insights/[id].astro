@@ -1,0 +1,101 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleFeaturedMedia from "../../components/article/ArticleFeaturedMedia.astro";
+import ArticleInlineCta from "../../components/article/ArticleInlineCta.astro";
+import ArticleSidebar from "../../components/article/ArticleSidebar.astro";
+import ArticleHeader from '../../components/article/ArticleHeader.astro';
+import en from '../../content/i18n/articles.en.json'; // Ensure this file exists or replace it if missing
+
+export async function getStaticPaths() {
+    // Filter to get only English posts
+    const blogEntries = await getCollection('blog');
+    return blogEntries
+        .filter(entry => entry.id.startsWith('en/'))
+        .map(entry => {
+            // Remove 'en/' prefix
+            const slug = entry.id.replace('en/', '');
+            return {
+                params: { id: slug },
+                props: { entry },
+            };
+        });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const t = en || await import('../../content/i18n/articles.es.json').then(m => m.default);
+
+// Resolve Spanish equivalent
+const allPosts = await getCollection('blog');
+const altPost = allPosts.find(p => 
+    p.data.translationKey === entry.data.translationKey && 
+    p.id.startsWith('es/')
+);
+const altPath = altPost ? `/es/blog/${altPost.id.replace('es/', '')}` : undefined;
+
+// Dynamic Related Posts
+const relatedItems = allPosts
+    .filter(p => p.id.startsWith('en/') && p.id !== entry.id && p.data.category === entry.data.category)
+    .slice(0, 3)
+    .map(p => ({
+        title: p.data.title,
+        category: p.data.category,
+        href: `/insights/${p.id.replace('en/', '')}`,
+        imageSrc: p.data.imageSrc,
+        imageAlt: p.data.imageAlt,
+        categoryClass: p.data.categoryClass
+    }));
+---
+<MainLayout lang="en" title={entry.data.title} altPath={altPath}>
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24">
+        <ArticleHeader
+                category={entry.data.category}
+                readTime={entry.data.readTime}
+                titleBefore=""
+                titleHighlight={entry.data.title}
+                titleAfter=""
+                author={{
+                    label: "Written by",
+                    name: entry.data.authorName,
+                    avatarSrc: entry.data.authorAvatar || "https://lh3.googleusercontent.com/aida-public/AB6AXuDnOmXPjNqdTgzX9iIoOCxgJh6OOVwGxqSd0c59YFlpRpev_GElR2VprmwBDttwayjonBb9QflKBqFWaXqzHxyizKtPzhrEuIGsQaT8m4d88vNqgNvuQDULFOVp1-csCfzCcLI1ZLweFyP-RF08Vl2gVJBSnmzd-fNCJgS4TiQAOkJuv6XogQ2dETZGpW_ZGzKtU5iuvpNXcp5W8X0vg9Ci1K_hO__kkSrous9z6YG41uvlQlGat7UNsgOQFApEExtOqYVyg8vIMJU",
+                    avatarAlt: "Avatar of " + entry.data.authorName
+                }}
+                actions={[
+                    { type: "icon", icon: "share" },
+                    { type: "icon", icon: "bookmark" },
+                    { type: "button", icon: "chat_bubble", label: "0 comments" }
+                ] as any}
+        />
+
+        <ArticleFeaturedMedia
+                imageSrc={entry.data.imageSrc}
+                imageAlt={entry.data.imageAlt}
+                figure={{label: "Fig.", caption: "Contextual imagery related to the subject."}}
+        />
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                
+                <article class="prose prose-lg max-w-none text-on-surface">
+                    <Content />
+                </article>
+
+                <br/><br/>
+                <ArticleInlineCta
+                        title="Ready to evolve your workflow?"
+                        description="Join our newsletter and receive updates directly to your inbox."
+                        inputPlaceholder="your@email.com"
+                        buttonText="Join"
+                />
+            </div>
+
+            <ArticleSidebar
+                    relatedTitle={"Related Insights"}
+                    relatedItems={relatedItems}
+                    tagsTitle={"Trending Tags"}
+                    tags={[]}
+            />
+        </div>
+    </main>
+</MainLayout>

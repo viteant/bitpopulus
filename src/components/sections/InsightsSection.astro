@@ -1,0 +1,61 @@
+---
+interface InsightItem {
+    date: string;
+    title: string;
+    description: string;
+    href?: string;
+    imageSrc: string;
+    imageAlt: string;
+    accentClass?: string;
+    readMoreLabel: string;
+}
+
+interface Props {
+    title: string;
+    subtitle: string;
+    items: InsightItem[];
+}
+
+const { title, subtitle, items } = Astro.props;
+---
+
+<section class="bg-surface-container-low px-8 py-24">
+    <div class="mx-auto max-w-350">
+        <div class="mb-16 text-center">
+            <h2 class="mb-4 text-5xl font-black uppercase">{title}</h2>
+            <p class="font-medium text-zinc-600">{subtitle}</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            {items.map((item) => (
+                    <article class="flex flex-col overflow-hidden rounded-xl border-4 border-zinc-900 bg-white transition-transform hover:-translate-y-2 neubrutalism-shadow">
+                        <div class="h-46 lg:h-auto lg:aspect-video border-b-4 border-zinc-900">
+                            <img src={item.imageSrc} alt={item.imageAlt} class="h-full w-full object-cover" />
+                        </div>
+
+                        <div class="flex flex-grow flex-col p-8">
+                            <time class:list={[
+                                "mb-4 block text-xs font-black uppercase tracking-tighter",
+                                item.accentClass ?? "text-violet-600",
+                            ]}>
+                                {item.date}
+                            </time>
+
+                            <h3 class="mb-6 cursor-pointer text-2xl font-black leading-tight hover:underline">
+                                {item.title}
+                            </h3>
+
+                            <p class="mb-8 flex-grow font-medium text-zinc-600">{item.description}</p>
+
+                            <a href={item.href ?? "#"} class="group mt-auto inline-flex items-center gap-2 text-sm font-black uppercase">
+                                {item.readMoreLabel}
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+                arrow_forward
+              </span>
+                            </a>
+                        </div>
+                    </article>
+            ))}
+        </div>
+    </div>
+</section>

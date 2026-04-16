@@ -1,0 +1,94 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from "../../../layouts/MainLayout.astro";
+import ArticleFeaturedMedia from "../../../components/article/ArticleFeaturedMedia.astro";
+import ArticleInlineCta from "../../../components/article/ArticleInlineCta.astro";
+import ArticleSidebar from "../../../components/article/ArticleSidebar.astro";
+import ArticleHeader from '../../../components/article/ArticleHeader.astro';
+import es from '../../../content/i18n/articles.es.json';
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection('blog');
+    return blogEntries
+        .filter(entry => entry.id.startsWith('es/'))
+        .map(entry => {
+            const slug = entry.id.replace('es/', '');
+            return {
+                params: { id: slug },
+                props: { entry },
+            };
+        });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const t = es;
+
+// Resolve English equivalent
+const allPosts = await getCollection('blog');
+const altPost = allPosts.find(p => 
+    p.data.translationKey === entry.data.translationKey && 
+    p.id.startsWith('en/')
+);
+const altPath = altPost ? `/insights/${altPost.id.replace('en/', '')}` : undefined;
+
+// Dynamic Related Posts
+const relatedItems = allPosts
+    .filter(p => p.id.startsWith('es/') && p.id !== entry.id && p.data.category === entry.data.category)
+    .slice(0, 3)
+    .map(p => ({
+        title: p.data.title,
+        category: p.data.category,
+        href: `/es/blog/${p.id.replace('es/', '')}`,
+        imageSrc: p.data.imageSrc,
+        imageAlt: p.data.imageAlt,
+        categoryClass: p.data.categoryClass
+    }));
+---
+<MainLayout lang="es" title={entry.data.title} altPath={altPath}>
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24">
+        <ArticleHeader
+                category={entry.data.category}
+                readTime={entry.data.readTime}
+                titleBefore=""
+                titleHighlight={entry.data.title}
+                titleAfter=""
+                author={{
+                    label: "Escrito por",
+                    name: entry.data.authorName,
+                    avatarSrc: entry.data.authorAvatar || t.header.author.avatarSrc,
+                    avatarAlt: "Avatar de " + entry.data.authorName
+                }}
+                actions={t.header.actions as any}
+        />
+
+        <ArticleFeaturedMedia
+                imageSrc={entry.data.imageSrc}
+                imageAlt={entry.data.imageAlt}
+                figure={t.featuredMedia.figure}
+        />
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                <article class="prose prose-lg max-w-none text-on-surface">
+                    <Content />
+                </article>
+
+                <br/><br/>
+                <ArticleInlineCta
+                        title={t.inlineCta.title}
+                        description={t.inlineCta.description}
+                        inputPlaceholder={t.inlineCta.inputPlaceholder}
+                        buttonText={t.inlineCta.buttonText}
+                />
+            </div>
+
+            <ArticleSidebar
+                    relatedTitle={t.sidebar.relatedTitle}
+                    relatedItems={relatedItems}
+                    tagsTitle={t.sidebar.tagsTitle}
+                    tags={t.sidebar.tags}
+            />
+        </div>
+    </main>
+</MainLayout>

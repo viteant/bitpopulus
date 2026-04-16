@@ -1,0 +1,19 @@
+---
+interface Props {
+    title: string
+    buttonText: string
+}
+
+const { title, buttonText } = Astro.props
+---
+
+<section class="max-w-7xl mx-auto px-8 text-center py-24">
+    <h2 class="text-[4rem] md:text-[6rem] font-black uppercase tracking-tighter leading-none mb-12">
+        {title}
+    </h2>
+
+    <button class="px-12 py-6 bg-white border-4 border-[#2F343C] text-[#2F343C] text-2xl font-black uppercase tracking-widest shadow-[12px_12px_0px_0px_rgba(106,0,244,1)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all group">
+        {buttonText}
+        <span class="inline-block ml-4 group-hover:translate-x-2 transition-transform">→</span>
+    </button>
+</section>

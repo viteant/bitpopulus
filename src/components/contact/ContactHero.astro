@@ -1,0 +1,19 @@
+---
+interface Props {
+    title: string
+    accent: string
+    description: string
+}
+
+const { title, accent, description } = Astro.props
+---
+
+<div class="mb-20">
+    <h1 class="text-[3.5rem] md:text-[5rem] font-black tracking-tight leading-[1.1] mb-6 text-on-surface">
+        {title}<span class="text-primary-container">{accent}</span>
+    </h1>
+
+    <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-medium leading-relaxed">
+        {description}
+    </p>
+</div>

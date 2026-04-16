@@ -1,0 +1,31 @@
+---
+interface PillarItem {
+    title: string
+    description: string
+}
+
+interface Props {
+    title: string
+    items: PillarItem[]
+}
+
+const { title, items } = Astro.props
+---
+
+<section class="px-8 py-24 bg-surface-container-high border-y-[4px] border-on-surface">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl font-black mb-16 tracking-tight">{title}</h2>
+
+        <div class="grid md:grid-cols-3 gap-0 border-[3px] border-on-surface bg-on-surface">
+            {items.map((item, index) => (
+                    <div class={`p-12 bg-white ${index < items.length - 1 ? 'border-r-[3px] border-on-surface' : ''}`}>
+                        <h5 class="text-2xl font-black mb-6 signature-gradient !bg-clip-text !text-transparent">
+                            {item.title}
+                        </h5>
+
+                        <p class="text-on-surface-variant">{item.description}</p>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

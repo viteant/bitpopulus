@@ -1,0 +1,67 @@
+---
+interface PhaseItem {
+    number: string;
+    title: string;
+    description: string;
+    icon: string;
+    iconClass?: string;
+    hoverNumberClass?: string;
+}
+
+interface Props {
+    title: string;
+    subtitle: string;
+    badge: string;
+    phases: PhaseItem[];
+}
+
+const { title, subtitle, badge, phases } = Astro.props as Props;
+---
+
+<section class="bg-surface px-8 py-32">
+    <div class="mx-auto max-w-350">
+        <div class="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <div class="max-w-2xl">
+                <h2 class="mb-6 text-5xl font-black uppercase leading-none tracking-tighter md:text-7xl">
+                    {title}
+                </h2>
+                <p class="text-xl font-medium text-zinc-600">{subtitle}</p>
+            </div>
+
+            <div class="border-4 border-zinc-900 bg-secondary-container p-4 text-xl font-black neubrutalism-shadow-small">
+                {badge}
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {phases.map((phase) => (
+                    <div class="group relative rounded-xl border-4 border-zinc-900 bg-white p-8 transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none neubrutalism-shadow">
+          <span
+                  class:list={[
+                      "absolute top-4 right-4 text-8xl font-black text-zinc-100 transition-colors",
+                      phase.hoverNumberClass ?? "group-hover:text-violet-100",
+                  ]}
+          >
+            {phase.number}
+          </span>
+
+                        <div class="relative z-10">
+            <span
+                    class:list={[
+                        "material-symbols-outlined mb-6 block !text-4xl",
+                        phase.iconClass ?? "text-violet-600",
+                    ]}
+            >
+              {phase.icon}
+            </span>
+
+                            <h3 class="mb-4 text-2xl font-black">{phase.title}</h3>
+                            <p class="font-medium leading-relaxed text-zinc-600">
+                                {phase.description}
+                            </p>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

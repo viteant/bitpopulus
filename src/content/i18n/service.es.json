@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Servicios"
+  },
+  "hero": {
+    "title": "Servicios",
+    "description": "BitPopulus no es una agencia, es un",
+    "highlight": "sistema integrado",
+    "badgeText": "Sincronía Total de Negocio"
+  },
+  "categoriesGrid": {
+    "items": [
+      {
+        "title": "Product Development",
+        "description": "Estrategia, Diseño y Validación de Producto.",
+        "icon": "rocket_launch",
+        "color": "#6A00F4"
+      },
+      {
+        "title": "Presencia & Growth",
+        "description": "Marketing, SEO y Adquisición de Usuarios.",
+        "icon": "trending_up",
+        "color": "#B5179E"
+      },
+      {
+        "title": "Automatización & Data",
+        "description": "IA, Flujos de Trabajo e Inteligencia de Datos.",
+        "icon": "memory",
+        "color": "#FF7A00"
+      },
+      {
+        "title": "Ingeniería & Arquitectura",
+        "description": "Software robusto, APIs y Cloud Infrastructure.",
+        "icon": "architecture",
+        "color": "#2F343C"
+      }
+    ]
+  },
+  "categoryOne": {
+    "coreLabel": "Core 01",
+    "title": "Product Development & Estrategia Digital",
+    "description": "Construimos la base de tu negocio digital. Desde la conceptualización hasta la validación de mercado.",
+    "items": [
+      {
+        "label": "Diseño",
+        "icon": "straighten"
+      },
+      {
+        "label": "Arquitectura de Negocio",
+        "icon": "account_tree"
+      },
+      {
+        "label": "Validación",
+        "icon": "fact_check"
+      },
+      {
+        "label": "Roadmap Estratégico",
+        "icon": "map"
+      }
+    ]
+  },
+  "categoryTwo": {
+    "coreLabel": "Core 02",
+    "title": "Presencia, Marca y Crecimiento Digital",
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCVZOruZqUKrps9wteiCRFT_vS3uXWxPRuZpn5oZUatBQP47y-hJWKF0GbLbWo-DM8DR7MfCu8l0HlETHTUHKwzzNc0VLnqzyNVLNmxNyDA0tL--6nmnbGkxAbkGM1U2lBr4eHTj-2rok0dpvbLE6Jc3M5u2HbbyjM8FAzN5IWsBTnqtAp5nWfMZIPyuLNJoFuLKXPohO4PdGyAaz_2eBOEaGXbryQ3gPJbYRxYzIESf5aG4Es14N_tJNdFGcqWWwLN0YWG_-EqRk",
+    "imageAlt": "primer plano de una interfaz digital futurista con elementos brillantes en fondo oscuro",
+    "items": [
+      {
+        "title": "Web Dev",
+        "description": "Experiencias digitales de alta fidelidad y performance."
+      },
+      {
+        "title": "Branding",
+        "description": "Identidad visual que corta a través del ruido."
+      },
+      {
+        "title": "Social Media",
+        "description": "Contenido que genera comunidad y autoridad."
+      },
+      {
+        "title": "Adquisición",
+        "description": "Canales de tráfico pagado optimizados para ROI."
+      },
+      {
+        "title": "Funnel Optimization",
+        "description": "Conversión de usuario a cliente en tiempo récord."
+      },
+      {
+        "title": "SEO & CRO",
+        "description": "Visibilidad orgánica y optimización de conversión."
+      }
+    ]
+  },
+  "categoryThree": {
+    "coreLabel": "Core 03",
+    "title": "Automatización, Data e Inteligencia",
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuDHKdwqFhuMysj6sLhOV23DcZsn6kaHLgphVojZ7g6DlZwcDmHXYBvq48TMeYcZwy7zeIX5xzVkEuK7CGrpOXWElbKIfpEU6f-wo6bV81abF8eTnWtSUxfmtpaffCuZAkPfmxorDwjknKRCIU84AOTjUEe5AcEs_TfEBWGC01zBwSuCVF4mj08VVniyl4YoYWF5Vz6Gp9ITAueHdQMKWpKRo141mHJAxnH9hzKhcaOalxwxeE4_lf5cocwiPauS2_f6Q_WAfb1gYLo",
+    "imageAlt": "visualización abstracta de redes neuronales y procesamiento de datos con luces naranjas y púrpuras",
+    "items": [
+      {
+        "number": "01",
+        "title": "Automatización e IA",
+        "description": "Integración de LLMs y flujos autónomos de trabajo."
+      },
+      {
+        "number": "02",
+        "title": "Integraciones Custom",
+        "description": "Conectamos tu ecosistema de herramientas sin fricción."
+      },
+      {
+        "number": "03",
+        "title": "Arquitectura de Datos",
+        "description": "Decisiones basadas en evidencia, no en intuición."
+      }
+    ]
+  },
+  "categoryFour": {
+    "coreLabel": "Core 04",
+    "title": "Ingeniería de Software y Arquitectura",
+    "description": "Escalabilidad masiva y seguridad de grado empresarial.",
+    "items": [
+      {
+        "label": "Desarrollo",
+        "icon": "code"
+      },
+      {
+        "label": "Arquitectura",
+        "icon": "schema"
+      },
+      {
+        "label": "APIs",
+        "icon": "api"
+      },
+      {
+        "label": "Datos",
+        "icon": "database"
+      },
+      {
+        "label": "Performance",
+        "icon": "bolt"
+      },
+      {
+        "label": "Infra",
+        "icon": "cloud"
+      },
+      {
+        "label": "Seguridad",
+        "icon": "encrypted"
+      }
+    ]
+  },
+  "connections": {
+    "title": "Cómo se conectan",
+    "descriptionBefore": "Nuestro valor no reside en la ejecución aislada, sino en la ",
+    "highlightedWord": "intersección",
+    "descriptionAfter": ". Donde la data alimenta al producto, el producto escala la marca y la ingeniería sostiene el crecimiento.",
+    "icons": ["all_inclusive", "cyclone", "sync_alt"]
+  },
+  "cta": {
+    "title": "Ready to Scale?",
+    "buttonText": "Hablemos hoy"
+  }
+}

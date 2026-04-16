@@ -1,0 +1,41 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    ctaLabel: string;
+    ctaHref?: string;
+}
+
+const {
+    title,
+    description,
+    ctaLabel,
+    ctaHref = "#contact",
+} = Astro.props;
+---
+
+<section id="contact" class="px-8 py-24">
+    <div class="mx-auto max-w-350">
+        <div class="relative overflow-hidden rounded-xl border-4 border-zinc-900 bg-brand-gradient p-12 text-white md:p-24 neubrutalism-shadow">
+            <div class="relative z-10 max-w-3xl">
+                <h2 class="mb-8 text-5xl font-black uppercase leading-[0.8] tracking-tighter md:text-7xl">
+                    {title}
+                </h2>
+
+                <p class="mb-12 text-xl font-medium leading-relaxed opacity-90 md:text-2xl">
+                    {description}
+                </p>
+
+                <a
+                        href={ctaHref}
+                        class="inline-block border-4 border-zinc-900 bg-white px-12 py-6 text-xl font-black uppercase text-zinc-900 transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none neubrutalism-shadow"
+                >
+                    {ctaLabel}
+                </a>
+            </div>
+
+            <span class="material-symbols-outlined absolute -right-10 -bottom-10 rotate-12 select-none text-[300px] opacity-10"
+                  style="font-variation-settings: 'FILL' 1;"> bolt </span>
+        </div>
+    </div>
+</section>

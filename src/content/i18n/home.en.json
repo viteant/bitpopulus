@@ -1,0 +1,175 @@
+{
+  "seo": {
+    "title": "BitPopulus | We build and grow your digital business"
+  },
+  "hero": {
+    "badge": "The Kinetic Curator",
+    "titleBefore": "We build and",
+    "titleHighlight": "grow",
+    "titleAfter": "your digital business",
+    "description": "Unlock your brand’s potential with a digital architecture designed for editorial impact and infinite scale.",
+    "primaryCta": "Get started",
+    "secondaryCta": "View projects",
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAafB54ogxoV0FIzRQYQFukzGhIvjhTXL5eHXvIpffNZRZOG1lUCu2TQKa0ipURpkZe_cWbPa0fRQ88jE8XcoQ06rLsBGFf4tohjKA2SpjNPVuejWPeRc2HS6pTmXly61_nOyd5LbX5ISiTUs2IT1nCXN6CwbpxbBBXCoQ9u_DoP3SYRU1r2SF0QAx1xfwA8qfJW71uZq1f0qCGaJhJsgZiWmLg3GFqCWr6EAAnjZHvWYOKskIgTD0Ss7jc-QwvkW0WeSCnqfvbPVs",
+    "imageAlt": "Digital abstract art",
+    "floatingTop": "+400% Growth",
+    "floatingBottom": "Data Intelligence"
+  },
+  "problems": {
+    "title": "Feeling stuck?",
+    "subtitle": "The common problems preventing your business from reaching the scale it deserves.",
+    "badge": "WE FIX THIS.",
+    "items": [
+      {
+        "title": "Digital Invisibility",
+        "description": "You have a great product, but nobody knows it exists. Your current presence doesn’t communicate authority.",
+        "icon": "visibility_off",
+        "accentClass": "text-violet-600",
+        "rotateClass": "-rotate-1"
+      },
+      {
+        "title": "Limited Scale",
+        "description": "Your manual processes are slowing growth down. You can’t grow without everything breaking.",
+        "icon": "trending_down",
+        "accentClass": "text-[#B5179E]",
+        "rotateClass": "rotate-2 mt-4 md:mt-12"
+      },
+      {
+        "title": "Decisions Without Data",
+        "description": "You are guessing what works. Without a data architecture, you are operating blind in the market.",
+        "icon": "database",
+        "accentClass": "text-[#FF7A00]",
+        "rotateClass": "-rotate-2"
+      }
+    ]
+  },
+  "scaling": {
+    "title": "The Scaling Engine",
+    "subtitle": "Our 4-phase architecture to take your business from idea to market dominance.",
+    "badge": "4 PHASES TO SCALE",
+    "phases": [
+      {
+        "number": "01",
+        "title": "Strategy",
+        "description": "We define your business DNA and the roadmap for digital domination.",
+        "icon": "architecture",
+        "iconClass": "text-violet-600",
+        "hoverNumberClass": "group-hover:text-violet-100"
+      },
+      {
+        "number": "02",
+        "title": "Presence",
+        "description": "We build high-impact platforms that captivate and convert.",
+        "icon": "web",
+        "iconClass": "text-[#B5179E]",
+        "hoverNumberClass": "group-hover:text-[#B5179E]/10"
+      },
+      {
+        "number": "03",
+        "title": "Growth",
+        "description": "We saturate the market with precise and scalable tactics.",
+        "icon": "trending_up",
+        "iconClass": "text-[#FF7A00]",
+        "hoverNumberClass": "group-hover:text-[#FF7A00]/10"
+      },
+      {
+        "number": "04",
+        "title": "Scale",
+        "description": "We optimize and automate for compound growth.",
+        "icon": "speed",
+        "iconClass": "text-tertiary-fixed-dim",
+        "hoverNumberClass": "group-hover:text-tertiary-fixed-dim/20"
+      }
+    ]
+  },
+  "pillars": {
+    "title": "Our Pillars",
+    "feature": {
+      "label": "Innovation",
+      "title": "Product Development & Digital Strategy",
+      "description": "From idea to validation. We create digital products people love to use.",
+      "bullets": ["MVP Strategy", "UX/UI Design Systems", "Market Intelligence"],
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuB69hBoeTl9M4IfkBfRDqpwZHrLWaNQoNj16xmN3ZBvPhdIGEDpT7X6JFJjTGhVYRcdan_A09Pj8PYBfAxZeyhbQ467fSfbg8yFIRIv-KJ51CJihC4WopPBvefBrq45jDfJRfs9oziyW2COWhYxE7c_Iw_QAAjSg_cQ8KbQFMCYw2LiNKZD7INqGS0jsbu3PC7V3fMKURfbMpwEnJidcocLnrKaNKRcOQnV1-LqipZF-HW3urS-zao_dF00r0nD-AuT0iCGnm90Mf0",
+      "imageAlt": "UX design process"
+    },
+    "brandGrowth": {
+      "title": "Presence, Brand & Growth",
+      "description": "We build brands that dominate the conversation.",
+      "bullets": [
+        "Organic Positioning and Authority Branding",
+        "Data-Driven Performance Campaigns",
+        "Multi-channel Content Ecosystems"
+      ],
+      "cta": "View methodology"
+    },
+    "ai": {
+      "title": "Automation & AI",
+      "description": "We inject artificial intelligence into your core processes.",
+      "tags": ["Custom LLMs", "Workflow Auto"]
+    },
+    "engineering": {
+      "title": "Software Engineering & Architecture",
+      "description": "We build the technical backbone of your business.",
+      "stack": ["React/Next.js", "Cloud Scale", "API First", "Security"]
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "titleMuted": "/ Recent",
+    "viewAllLabel": "View all",
+    "items": [
+      {
+        "title": "Aether SaaS",
+        "category": "Fintech • Scalability • AI",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBHKO2ttmOMYlrjz5_nK9hLtf_ArNpqQY5zgHaFlt-M858oucFDYphCSXZsvXhza2r13xEeRVmIGmXlrQhqG4FsxCzxZBUab-IjQRZSQnqmRET9bc9dVnfM-ZkaMb-V7OWflRZlquDqxMY_a2vM85xezJgoYApu33vJo9X-nL1zZbiGYwiKjjOmFzBm8Sop826ZQo6BFMvA1aIPhiUXjCTf1MbtdJ7Vt0WtOSckoK_YLXtdFH0wdJt5EJXEqlscU9o8bYoi27dK-rQ",
+        "imageAlt": "SaaS project"
+      },
+      {
+        "title": "Kinetica App",
+        "category": "Mobile • Health • Community",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuChkjPQhbpYjRx6e47fFuoAexv6SXvzssyZ_SWpNZO87xffTF_1iX8NArRDaDAox5CIzuyi-eYrUz3K7X52wGbQ7316mxWgCZZs9I4tGn0XqeJ971ZxBDbQALWoMCyXN4g2ZIA3d-5AnI1fkONgOPtK_zHj-MrQr6IGXY9oVQzvV5Z3PHo-Vo0Fs5kGLBHKY-1xQopmbywAQabxBuhLawTpXaR8pojdlJ_od7wdS_y4OBLu_P3JshGd1l8xZ1hA8jzi-i7K2gPiwmw",
+        "imageAlt": "Mobile app",
+        "offset": true
+      }
+    ]
+  },
+  "insights": {
+    "title": "Curated Insights",
+    "subtitle": "Critical thinking on design, technology, and scale.",
+    "items": [
+      {
+        "date": "OCT 24, 2023",
+        "title": "Why Minimalism Is Dying in B2B",
+        "description": "The era of generic templates is over.",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuB8_Xq_Y9_Z_w9_P_m7_rPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N",
+        "imageAlt": "Minimalism",
+        "accentClass": "text-violet-600",
+        "readMoreLabel": "Read more"
+      },
+      {
+        "date": "SEP 15, 2023",
+        "title": "Generative AI: From Hype to Real Infrastructure",
+        "description": "How to integrate language models without sacrificing control.",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7_M9_L8_K9_J7_O6_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N",
+        "imageAlt": "AI infrastructure",
+        "accentClass": "text-[#B5179E]",
+        "readMoreLabel": "Read more"
+      },
+      {
+        "date": "AUG 02, 2023",
+        "title": "The Growth Engine: Data Over Intuition",
+        "description": "What to actually watch to scale with precision.",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuA1_R2_E3_S4_T5_Q6_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N",
+        "imageAlt": "Data and growth",
+        "accentClass": "text-[#FF7A00]",
+        "readMoreLabel": "Read more"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to scale?",
+    "description": "Don’t look for an agency. Look for a growth partner who understands the kinetics of the digital world.",
+    "ctaLabel": "Book your free audit",
+    "ctaHref": "#"
+  }
+}

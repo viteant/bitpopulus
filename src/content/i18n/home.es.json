@@ -1,0 +1,175 @@
+{
+  "seo": {
+    "title": "BitPopulus | Construimos y hacemos crecer tu negocio digital"
+  },
+  "hero": {
+    "badge": "Software + Datos + Creatividad",
+    "titleBefore": "Construimos y hacemos",
+    "titleHighlight": "crecer",
+    "titleAfter": "tu negocio digital",
+    "description": "Desbloquea el potencial de tu marca con una arquitectura digital diseñada para el impacto editorial y la escala infinita.",
+    "primaryCta": "Empieza ahora",
+    "secondaryCta": "Ver proyectos",
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAafB54ogxoV0FIzRQYQFukzGhIvjhTXL5eHXvIpffNZRZOG1lUCu2TQKa0ipURpkZe_cWbPa0fRQ88jE8XcoQ06rLsBGFf4tohjKA2SpjNPVuejWPeRc2HS6pTmXly61_nOyd5LbX5ISiTUs2IT1nCXN6CwbpxbBBXCoQ9u_DoP3SYRU1r2SF0QAx1xfwA8qfJW71uZq1f0qCGaJhJsgZiWmLg3GFqCWr6EAAnjZHvWYOKskIgTD0Ss7jc-QwvkW0WeSCnqfvbPVs",
+    "imageAlt": "Arte digital abstracto",
+    "floatingTop": "Centrados en el crecimiento",
+    "floatingBottom": "Inteligencia y Datos"
+  },
+  "problems": {
+    "title": "¿Te sientes estancado?",
+    "subtitle": "Los problemas comunes que impiden que tu negocio alcance la escala que merece.",
+    "badge": "SOLUCIONAMOS ESTOS PROBLEMAS:",
+    "items": [
+      {
+        "title": "Invisibilidad Digital",
+        "description": "Tienes un gran producto, pero nadie sabe que existe. Tu presencia actual no transmite autoridad.",
+        "icon": "visibility_off",
+        "accentClass": "text-violet-600",
+        "rotateClass": "-rotate-1"
+      },
+      {
+        "title": "Escala Limitada",
+        "description": "Tus procesos manuales están frenando el crecimiento. No puedes crecer sin que todo se rompa.",
+        "icon": "trending_down",
+        "accentClass": "text-[#B5179E]",
+        "rotateClass": "rotate-2 mt-4 md:mt-12"
+      },
+      {
+        "title": "Decisiones sin Datos",
+        "description": "Estás adivinando lo que funciona. Sin una arquitectura de datos, vas a ciegas en el mercado.",
+        "icon": "database",
+        "accentClass": "text-[#FF7A00]",
+        "rotateClass": "-rotate-2"
+      }
+    ]
+  },
+  "scaling": {
+    "title": "The Scaling Engine",
+    "subtitle": "Nuestra arquitectura de 4 fases para llevar tu negocio de la idea al dominio del mercado.",
+    "badge": "4 FASES DE ESCALA",
+    "phases": [
+      {
+        "number": "01",
+        "title": "Estrategia",
+        "description": "Definimos el ADN de tu negocio y la hoja de ruta para la dominación digital.",
+        "icon": "architecture",
+        "iconClass": "text-violet-600",
+        "hoverNumberClass": "group-hover:text-violet-100"
+      },
+      {
+        "number": "02",
+        "title": "Presencia",
+        "description": "Construimos plataformas de alto impacto que cautivan y convierten.",
+        "icon": "web",
+        "iconClass": "text-[#B5179E]",
+        "hoverNumberClass": "group-hover:text-[#B5179E]/10"
+      },
+      {
+        "number": "03",
+        "title": "Crecimiento",
+        "description": "Saturamos el mercado con tácticas precisas y escalables.",
+        "icon": "trending_up",
+        "iconClass": "text-[#FF7A00]",
+        "hoverNumberClass": "group-hover:text-[#FF7A00]/10"
+      },
+      {
+        "number": "04",
+        "title": "Escala",
+        "description": "Optimizamos y automatizamos para crecimiento compuesto.",
+        "icon": "speed",
+        "iconClass": "text-tertiary-fixed-dim",
+        "hoverNumberClass": "group-hover:text-tertiary-fixed-dim/20"
+      }
+    ]
+  },
+  "pillars": {
+    "title": "Nuestros Pilares",
+    "feature": {
+      "label": "Innovación",
+      "title": "Desarrollo de Productos y Estrategia Digital",
+      "description": "De la idea a la validación. Creamos productos digitales que la gente ama usar.",
+      "bullets": ["Diseño de MVP", "Diseño UX/UI", "Consultoría de Producto"],
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuB69hBoeTl9M4IfkBfRDqpwZHrLWaNQoNj16xmN3ZBvPhdIGEDpT7X6JFJjTGhVYRcdan_A09Pj8PYBfAxZeyhbQ467fSfbg8yFIRIv-KJ51CJihC4WopPBvefBrq45jDfJRfs9oziyW2COWhYxE7c_Iw_QAAjSg_cQ8KbQFMCYw2LiNKZD7INqGS0jsbu3PC7V3fMKURfbMpwEnJidcocLnrKaNKRcOQnV1-LqipZF-HW3urS-zao_dF00r0nD-AuT0iCGnm90Mf0",
+      "imageAlt": "Proceso de diseño UX"
+    },
+    "brandGrowth": {
+      "title": "Presencia, Marca y Crecimiento",
+      "description": "Construimos marcas que dominan la conversación.",
+      "bullets": [
+        "Posicionamiento Orgánico y Branding de Autoridad",
+        "Campañas de Performance Basadas en Datos",
+        "Ecosistemas de Contenido Multi-canal"
+      ],
+      "cta": "Ver metodología"
+    },
+    "ai": {
+      "title": "Automatización e IA",
+      "description": "Inyectamos inteligencia artificial en tus procesos core.",
+      "tags": ["LLMs", "Automatización", "ChatBots", "IA"]
+    },
+    "engineering": {
+      "title": "Ingeniería de Software & Arquitectura",
+      "description": "Construimos la columna vertebral técnica de tu negocio.",
+      "stack": ["Software", "Infraestructura", "CI/CD", "Mejora Continua"]
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "titleMuted": "/ Reciente",
+    "viewAllLabel": "Ver todos",
+    "items": [
+      {
+        "title": "APPROVOX",
+        "category": "Fintech • Projects Management",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBHKO2ttmOMYlrjz5_nK9hLtf_ArNpqQY5zgHaFlt-M858oucFDYphCSXZsvXhza2r13xEeRVmIGmXlrQhqG4FsxCzxZBUab-IjQRZSQnqmRET9bc9dVnfM-ZkaMb-V7OWflRZlquDqxMY_a2vM85xezJgoYApu33vJo9X-nL1zZbiGYwiKjjOmFzBm8Sop826ZQo6BFMvA1aIPhiUXjCTf1MbtdJ7Vt0WtOSckoK_YLXtdFH0wdJt5EJXEqlscU9o8bYoi27dK-rQ",
+        "imageAlt": "Proyecto SaaS"
+      },
+      {
+        "title": "ABC Healthcare",
+        "category": "Web • Health • SEO",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuChkjPQhbpYjRx6e47fFuoAexv6SXvzssyZ_SWpNZO87xffTF_1iX8NArRDaDAox5CIzuyi-eYrUz3K7X52wGbQ7316mxWgCZZs9I4tGn0XqeJ971ZxBDbQALWoMCyXN4g2ZIA3d-5AnI1fkONgOPtK_zHj-MrQr6IGXY9oVQzvV5Z3PHo-Vo0Fs5kGLBHKY-1xQopmbywAQabxBuhLawTpXaR8pojdlJ_od7wdS_y4OBLu_P3JshGd1l8xZ1hA8jzi-i7K2gPiwmw",
+        "imageAlt": "Sitio Web de Salud",
+        "offset": true
+      }
+    ]
+  },
+  "insights": {
+    "title": "Insights de Curación",
+    "subtitle": "Pensamiento crítico sobre diseño, tecnología y escala.",
+    "items": [
+      {
+        "date": "OCT 24, 2023",
+        "title": "Por qué el Minimalismo está Muriendo en el B2B",
+        "description": "La era de las plantillas genéricas ha terminado.",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuB8_Xq_Y9_Z_w9_P_m7_rPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N",
+        "imageAlt": "Minimalismo",
+        "accentClass": "text-violet-600",
+        "readMoreLabel": "Leer más"
+      },
+      {
+        "date": "SEP 15, 2023",
+        "title": "IA Generativa: Del Hype a la Infraestructura Real",
+        "description": "Cómo integrar modelos de lenguaje sin sacrificar control.",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7_M9_L8_K9_J7_O6_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N",
+        "imageAlt": "Infraestructura IA",
+        "accentClass": "text-[#B5179E]",
+        "readMoreLabel": "Leer más"
+      },
+      {
+        "date": "AUG 02, 2023",
+        "title": "El Motor de Crecimiento: Datos sobre Intuición",
+        "description": "Qué mirar realmente para escalar con precisión.",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuA1_R2_E3_S4_T5_Q6_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N6n6O8rM2_Z_v8_Qf_3YmB7_qPjJ9k7gT8N",
+        "imageAlt": "Datos y crecimiento",
+        "accentClass": "text-[#FF7A00]",
+        "readMoreLabel": "Leer más"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to scale?",
+    "description": "No busques una agencia. Busca un socio de crecimiento que entienda la cinética del mundo digital.",
+    "ctaLabel": "Reserva tu auditoría gratis",
+    "ctaHref": "#"
+  }
+}

@@ -1,0 +1,28 @@
+---
+interface Props {
+    imageSrc: string
+    imageAlt: string
+    status: string
+    title: string
+}
+
+const { imageSrc, imageAlt, status, title } = Astro.props
+---
+
+<div class="mt-8 relative overflow-hidden rounded-xl border-4 border-on-surface h-48 group">
+    <img
+            src={imageSrc}
+            alt={imageAlt}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+    />
+
+    <div class="absolute inset-0 bg-identity-gradient opacity-40 mix-blend-multiply"></div>
+
+    <div class="absolute bottom-4 left-4 right-4">
+    <span class="bg-on-surface text-surface text-[10px] font-black px-3 py-1 uppercase rounded-full border border-surface mb-2 inline-block">
+      {status}
+    </span>
+
+        <p class="text-white font-black text-lg leading-tight uppercase">{title}</p>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Contacto"
+  },
+  "hero": {
+    "title": "Contacto",
+    "accent": ".",
+    "description": "Hablemos de tu próximo sistema. Ya sea una idea por validar o un negocio listo para escalar, estamos aquí para ejecutar."
+  },
+  "form": {
+    "submitText": "Enviar Mensaje",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Nombre",
+        "placeholder": "Tu nombre",
+        "type": "text",
+        "tag": "input"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "placeholder": "hola@ejemplo.com",
+        "type": "email",
+        "tag": "input"
+      },
+      {
+        "name": "company",
+        "label": "Compañía",
+        "placeholder": "Nombre de tu empresa",
+        "type": "text",
+        "tag": "input"
+      },
+      {
+        "name": "project",
+        "label": "Cuéntanos sobre tu proyecto",
+        "placeholder": "¿Qué estás construyendo?",
+        "tag": "textarea",
+        "rows": 4
+      }
+    ]
+  },
+  "infoCards": {
+    "items": [
+      {
+        "label": "WhatsApp",
+        "value": "+1 (555) 000-BPOP",
+        "icon": "chat",
+        "iconBgClass": "bg-secondary-container",
+        "href": "https://wa.me/15550002676"
+      },
+      {
+        "label": "Email",
+        "value": "hello@bitpopulus.com",
+        "icon": "alternate_email",
+        "iconBgClass": "bg-tertiary-fixed",
+        "href": "mailto:hello@bitpopulus.com"
+      },
+      {
+        "label": "Ubicación",
+        "value": "Remote / Global",
+        "icon": "public",
+        "iconBgClass": "bg-primary-fixed"
+      }
+    ]
+  },
+  "socials": {
+    "title": "SÍGUENOS",
+    "items": [
+      {
+        "label": "Twitter",
+        "icon": "brand_family",
+        "href": "#",
+        "hoverClass": "hover:bg-secondary-container"
+      },
+      {
+        "label": "LinkedIn",
+        "icon": "work",
+        "href": "#",
+        "hoverClass": "hover:bg-primary-fixed"
+      },
+      {
+        "label": "GitHub",
+        "icon": "code",
+        "href": "#",
+        "hoverClass": "hover:bg-tertiary-fixed"
+      }
+    ]
+  },
+  "decorativeCard": {
+    "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuA1u0Vhav8PnN_BzXjoaot0g5xc3VHBldTpirEiyCQoPSauosksTN5oNJxMbCHeoewMGEKNg_q5xt61hJJPhjoJhfN8wsaEyE2mf9SRCCOm3tsU2G-UZvyjZ1Hvdc9MrXFIsSIJml4Wb23n7JLxz40vm4NCVIm9WFmaI-G6g7gbtnT3s57hwcB5SKiNrdaCh_s7tUueKQH25pEKZUufSfXXfMdznPAm-KvTt9qU-wOCc_I9Fk4vq8cv-vQOWg_yk43UWpnt000qApI",
+    "imageAlt": "Textura digital abstracta",
+    "status": "System Status: Online",
+    "title": "Listos para construir el futuro contigo."
+  }
+}

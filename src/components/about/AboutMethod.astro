@@ -1,0 +1,67 @@
+---
+interface MethodItem {
+    number: string
+    title: string
+    description: string
+    cardClass?: string
+    titleClass?: string
+    descriptionClass?: string
+    colSpan?: string
+}
+
+interface Props {
+    title: string
+    items: MethodItem[]
+}
+
+const { title, items } = Astro.props
+const [first, second, third, fourth] = items
+---
+
+<section class="px-8 py-24 bg-on-surface text-white">
+    <div class="max-w-screen-xl mx-auto">
+        <h2 class="text-4xl md:text-6xl font-black mb-16 text-center italic tracking-tighter">
+            {title}
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class={`md:col-span-2 bg-zinc-900 border-2 border-zinc-700 p-8 flex flex-col justify-between min-h-[300px] transition-colors ${first.cardClass ?? ''}`}>
+                <span class="text-6xl! font-black opacity-30">{first.number}</span>
+                <div>
+                    <h4 class={`text-2xl font-black mb-2 ${first.titleClass ?? ''}`}>{first.title}</h4>
+                    <p class={first.descriptionClass ?? 'text-zinc-400'}>{first.description}</p>
+                </div>
+            </div>
+
+            <div class={`bg-zinc-900 border-2 border-zinc-700 p-8 flex flex-col justify-between min-h-[300px] transition-colors ${second.cardClass ?? ''}`}>
+                <span class="text-6xl! font-black opacity-30">{second.number}</span>
+                <div>
+                    <h4 class={`text-2xl font-black mb-2 ${second.titleClass ?? ''}`}>{second.title}</h4>
+                    <p class={second.descriptionClass ?? 'text-zinc-400'}>{second.description}</p>
+                </div>
+            </div>
+
+            <div class={`bg-zinc-900 border-2 border-zinc-700 p-8 flex flex-col justify-between min-h-[300px] transition-colors ${third.cardClass ?? ''}`}>
+                <span class="text-6xl! font-black opacity-30">{third.number}</span>
+                <div>
+                    <h4 class={`text-2xl font-black mb-2 ${third.titleClass ?? ''}`}>{third.title}</h4>
+                    <p class={third.descriptionClass ?? 'text-zinc-400'}>{third.description}</p>
+                </div>
+            </div>
+
+            <div class={`md:col-span-4 bg-zinc-800 border-2 border-zinc-700 p-8 flex flex-col md:flex-row items-center min-h-75 md:min-h-auto justify-between transition-all ${fourth.cardClass ?? ''}`}>
+                <div class="flex items-start justify-start w-full md:items-center gap-6">
+                    <span class="text-6xl! font-black opacity-30">{fourth.number}</span>
+                    <h4 class={`hidden md:block text-4xl font-black ${fourth.titleClass ?? ''}`}>{fourth.title}</h4>
+                </div>
+
+                <div>
+                    <h4 class={`md:hidden text-2xl mb-2 font-black ${fourth.titleClass ?? ''}`}>{fourth.title}</h4>
+                    <p class={`max-w-md md:text-right ${fourth.descriptionClass ?? 'text-zinc-400'}`}>
+                        {fourth.description}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

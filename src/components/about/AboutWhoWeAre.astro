@@ -1,0 +1,44 @@
+---
+interface Props {
+    title: string
+    paragraphs: string[]
+    focusTitle: string
+    focusDescription: string
+    floatingIcon?: string
+}
+
+const {
+    title,
+    paragraphs,
+    focusTitle,
+    focusDescription,
+    floatingIcon = 'sync'
+} = Astro.props
+---
+
+<section class="px-8 py-24 bg-surface-container-low">
+    <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">{title}</h2>
+
+            <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                {paragraphs.map((paragraph, index) => (
+                        <p class={index === paragraphs.length - 1 ? 'font-bold text-on-surface' : ''}>
+                            {paragraph}
+                        </p>
+                ))}
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="bg-secondary-container p-8 border-[3px] border-on-surface hard-shadow -rotate-2">
+                <h3 class="text-2xl font-black mb-4">{focusTitle}</h3>
+                <p class="font-medium">{focusDescription}</p>
+            </div>
+
+            <div class="absolute -bottom-6 -right-6 bg-tertiary-fixed p-6 border-[3px] border-on-surface hard-shadow rotate-3 hidden md:block">
+                <span class="material-symbols-outlined text-4xl">{floatingIcon}</span>
+            </div>
+        </div>
+    </div>
+</section>

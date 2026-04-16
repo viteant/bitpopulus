@@ -1,0 +1,33 @@
+---
+interface BeliefItem {
+    number: string
+    title: string
+    description: string
+}
+
+interface Props {
+    title: string
+    items: BeliefItem[]
+}
+
+const { title, items } = Astro.props
+---
+
+<section class="px-8 py-24">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-black mb-12 text-center">{title}</h2>
+
+        <ul class="space-y-8">
+            {items.map((item, index) => (
+                    <li class={`flex gap-6 items-start ${index < items.length - 1 ? 'pb-8 border-b-2 border-zinc-200' : ''}`}>
+                        <span class="text-primary font-black text-2xl">{item.number}</span>
+
+                        <div>
+                            <h6 class="text-xl font-bold mb-2">{item.title}</h6>
+                            <p class="text-on-surface-variant">{item.description}</p>
+                        </div>
+                    </li>
+            ))}
+        </ul>
+    </div>
+</section>

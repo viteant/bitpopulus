@@ -1,0 +1,70 @@
+---
+interface FilterItem {
+    label: string
+    active?: boolean
+}
+
+interface ProjectItem {
+    title: string
+    category: string
+    sector: string
+    imageSrc: string
+    imageAlt: string
+    isNew?: boolean
+}
+
+interface Props {
+    filters: FilterItem[]
+    gridLabel: string
+    projects: ProjectItem[]
+}
+
+const { filters, gridLabel, projects } = Astro.props
+---
+
+<section class="px-8 py-24 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16">
+        <div class="flex flex-wrap gap-4">
+            {filters.map((filter) => (
+                    <button
+                            class={`px-6 py-2 font-black uppercase tracking-widest text-sm border-2 border-black hard-shadow transition-all ${
+                                filter.active
+                                    ? 'bg-black text-white'
+                                    : 'bg-white text-black hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none'
+                            }`}
+                            type="button"
+                    >
+                        {filter.label}
+                    </button>
+            ))}
+        </div>
+
+        <h4 class="text-xl font-black uppercase tracking-tight text-outline">{gridLabel}</h4>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {projects.map((project) => (
+                <div class="relative overflow-visible">
+                    <div class="aspect-[4/5] bg-surface-container-highest border-2 border-black mb-6 relative group overflow-hidden">
+                        <img
+                                src={project.imageSrc}
+                                alt={project.imageAlt}
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+
+                    {project.isNew && (
+                            <div class="absolute -top-4 -right-4 w-16 h-16 bg-[#FFD60A] border-2 border-black flex items-center justify-center font-black rotate-12 hard-shadow">
+                                NEW
+                            </div>
+                    )}
+
+                    <h5 class="text-2xl font-black uppercase mb-2">{project.title}</h5>
+                    <p class="text-on-surface-variant font-bold uppercase text-xs tracking-widest">
+                        {project.sector} • {project.category}
+                    </p>
+                </div>
+        ))}
+    </div>
+</section>

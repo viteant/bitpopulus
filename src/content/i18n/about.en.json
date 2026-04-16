@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "title": "About Us"
+  },
+  "hero": {
+    "badge": "Company",
+    "titleBefore": "About",
+    "titleHighlight": "Us",
+    "description": "BitPopulus was born from something simple: most digital businesses do not fail because they lack ideas, they fail because of poor execution. We design, build, and scale digital businesses by connecting strategy, technology, growth, and data into one system."
+  },
+  "whoWeAre": {
+    "title": "The chaos of disconnected services.",
+    "paragraphs": [
+      "Most digital businesses suffer from an invisible problem: their services do not talk to each other. Strategy says one thing, technology builds another, and growth waits for a miracle.",
+      "BitPopulus solves this by connecting the dots. We do not deliver isolated pieces; we design and execute the complete ecosystem your business needs to scale."
+    ],
+    "focusTitle": "Our Approach",
+    "focusDescription": "We connect Strategy + Technology + Growth under one roof to ensure every line of code generates return on investment."
+  },
+  "missionVisionValues": {
+    "items": [
+      {
+        "title": "Mission",
+        "description": "Turn raw ideas into functional and profitable businesses through precision engineering and data-centered design.",
+        "icon": "rocket_launch",
+        "iconClass": "text-primary"
+      },
+      {
+        "title": "Vision",
+        "description": "Become the undisputed benchmark in LatAm for building high-impact digital infrastructure, transforming how the region competes globally.",
+        "icon": "visibility",
+        "iconClass": "text-[#B5179E]",
+        "cardClass": "md:mt-12"
+      }
+    ],
+    "valuesTitle": "Our Values",
+    "values": [
+      {
+        "label": "Clarity",
+        "icon": "lightbulb"
+      },
+      {
+        "label": "Results",
+        "icon": "trending_up"
+      },
+      {
+        "label": "Systems Thinking",
+        "icon": "account_tree"
+      },
+      {
+        "label": "Innovation",
+        "icon": "bolt"
+      },
+      {
+        "label": "Agility",
+        "icon": "timer"
+      },
+      {
+        "label": "Responsibility",
+        "icon": "verified_user"
+      }
+    ]
+  },
+  "method": {
+    "title": "How we operate",
+    "items": [
+      {
+        "number": "01",
+        "title": "Define what to build",
+        "description": "Market analysis, user journey, and initial technical architecture.",
+        "cardClass": "hover:bg-primary"
+      },
+      {
+        "number": "02",
+        "title": "Develop",
+        "description": "Robust and scalable engineering.",
+        "cardClass": "hover:bg-[#B5179E]"
+      },
+      {
+        "number": "03",
+        "title": "Attract",
+        "description": "Growth loops and user acquisition.",
+        "cardClass": "hover:bg-[#FF7A00]"
+      },
+      {
+        "number": "04",
+        "title": "Optimize",
+        "description": "Constant iteration based on real data to maximize LTV and minimize CAC.",
+        "cardClass": "group hover:border-primary"
+      }
+    ]
+  },
+  "differentiators": {
+    "title": "Differentiators",
+    "items": [
+      {
+        "title": "Product",
+        "description": "Not just code. We build products people love using and that solve real problems.",
+        "icon": "category",
+        "iconBgClass": "bg-primary-fixed"
+      },
+      {
+        "title": "Execution",
+        "description": "Speed without compromising quality. We deliver weekly milestones, not six-month promises.",
+        "icon": "precision_manufacturing",
+        "iconBgClass": "bg-secondary-container"
+      },
+      {
+        "title": "Data",
+        "description": "Decisions based on evidence, not intuition. Data is our only compass.",
+        "icon": "insights",
+        "iconBgClass": "bg-tertiary-fixed"
+      },
+      {
+        "title": "Integration",
+        "description": "We merge with your team. We operate like an elite internal department.",
+        "icon": "hub",
+        "iconBgClass": "bg-outline-variant"
+      }
+    ]
+  },
+  "teamPillars": {
+    "title": "Team Pillars",
+    "items": [
+      {
+        "title": "Product & Engineering",
+        "description": "Software architects and UX designers obsessed with zero friction and infinite scalability."
+      },
+      {
+        "title": "Growth & Data",
+        "description": "Data scientists and marketing strategists who find the channels where your users actually live."
+      },
+      {
+        "title": "Brand & Communication",
+        "description": "Creatives who build identities that do not just look good, but generate trust and authority."
+      }
+    ]
+  },
+  "beliefs": {
+    "title": "What We Believe",
+    "items": [
+      {
+        "number": "/01",
+        "title": "Execution is everything.",
+        "description": "Ideas are cheap. What separates the winner from the rest is the ability to bring that idea into production without mistakes."
+      },
+      {
+        "number": "/02",
+        "title": "Growth is a system.",
+        "description": "There are no silver bullets. Real growth comes from a series of controlled experiments and repeatable systems."
+      },
+      {
+        "number": "/03",
+        "title": "Technology serves the business.",
+        "description": "We never use technology because it is trendy. We only implement tools that solve clear business objectives."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "READY TO SCALE?",
+    "title": "Let’s build the system your business deserves.",
+    "buttonText": "Schedule a Consultation"
+  }
+}

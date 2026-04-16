@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Insights"
+  },
+  "featured": {
+    "sectionLabel": "Insights Destacados",
+    "post": {
+      "category": "Estrategia",
+      "date": "24 DE OCTUBRE, 2024",
+      "title": "Navegando el gran desacople de la infraestructura tecnológica",
+      "description": "En una era definida por cambios arquitectónicos acelerados, exploramos cómo las empresas modernas están reconstruyendo sus cimientos para sostener hipercrecimiento sin el lastre legacy.",
+      "cta": "Leer insight completo",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmNMKZL4BhlCWgQ83DbfbR05jGXgvtnajA-NY6Gx9wIDkic-cR1DySRYvA6bKXQAANrAJZjUBDO8VMZh3lNb0WwiQ3omzzuGRz0rpNYiB9fwoJXaRR0HV5PhxHuWFvl-ooBxKBnbh8VpoGOqSNeGfidCb5ggEYeiI0WLY54CV8uCXmjpWKEkFKDjZmxlAWjHEvsCI3Nd960DlFgd57wM14zenkKHzJfACPRkcrDuhPEd562ut3nEIKLhCGgXCw6qYY9E2Wtzg5hbc",
+      "imageAlt": "Portada del insight destacado"
+    }
+  },
+  "filters": {
+    "label": "Filtrar por:",
+    "items": [
+      { "label": "Todos", "active": true },
+      { "label": "Estrategia" },
+      { "label": "Tech" },
+      { "label": "Growth" },
+      { "label": "Escala" }
+    ]
+  },
+  "articles": [
+    {
+      "title": "El salto cuántico: prepararse para el cifrado post-cuántico",
+      "excerpt": "El reloj corre contra los estándares actuales de cifrado. Así es como los CTOs líderes están rediseñando hoy sus stacks de seguridad.",
+      "category": "Tech",
+      "readTime": "5 MIN DE LECTURA",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCyfD2kxiaio3Arog2Ny-Ai-UivXCZ4gqWeX1JypIpGU3fP992kmkt3GItfPAX1_aJYpBz-PpTY5gTkBx86VuNF5MYGeeGkefN0v0RokO49ruBEX67VderQgSxswIzjNdEuBKHa0hmIJICrIlmv7oS8TWfXx-rr90ok9qOXp3zcmDiofysxmbuUogveJUbp3qJoXpIMIBVAe-uQ1apDDNEZ4l0dz-rVKqa2WcdVw-Ha9ZicegukSxVaYxiSFn1pBfZEEmTtV9KhKKc",
+      "imageAlt": "Artículo de ciberseguridad",
+      "categoryClass": "bg-tertiary-fixed text-on-tertiary-fixed"
+    },
+    {
+      "title": "La retención es la nueva adquisición: la revolución del LTV",
+      "excerpt": "Deja de quemar caja en adquisición top-of-funnel. Analizamos la economía unitaria de los modelos de suscripción más exitosos del mundo.",
+      "category": "Growth",
+      "readTime": "8 MIN DE LECTURA",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZQVF8TVUlXyIU9bT1QiMexF2h6jJ14WGRQw0puQgtMSatd0Q-7pylKSrL8KZ6htwMM3Gp-3n99wLAS4eZjzkHwL_uNPXc2D5jaj8r8yZyTmuNr2Pkb2YeyQWPbvddeVOOfkrs_H56IMUPVuaa3aON32V2Bz-cOxJK7hJNn3iTlUYpiHU7Rf7fp5MTw6_jYf73R9xBAU36Xea-gcYsCFgdOtN89A6tZdzmZvRXXwdcku91dco0k7D_YHE7XNatlgEoU-fShC5Rpnc",
+      "imageAlt": "Artículo de growth",
+      "categoryClass": "bg-secondary-container text-on-secondary-container"
+    },
+    {
+      "title": "¿La muerte del logo minimalista? Por qué las marcas se están volviendo raras",
+      "excerpt": "La era del 'blanding' terminó. El impacto máximo, los colores vibrantes y la tipografía expresiva están recuperando el paisaje digital.",
+      "category": "Cultura",
+      "readTime": "6 MIN DE LECTURA",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCdOHoyBwrsPlQ4yUy86WJxpegIX_pEeKYM_AfxLILdTWfRqerEa88LADLYQ-Cx_LALD7iPWhh31bZxYBgAnQEmjBqjIMnj64MioX_8_wf5ZO85PJgetaSQs1svbxMqaYqksPZYRp5YBGsOxXBE7RqSPOtKlcDnpDUAb0RLWKyjwc1V_X04k8F2sq8-ul4YieGURfvSLcwk-OH2nsp66xVDKGm3QqnQoizDZwsiqMMO4oiiTtERwC7I29UXavhybKSMkp5p7HFDx4",
+      "imageAlt": "Artículo de diseño",
+      "categoryClass": "bg-white text-black",
+      "featured": true
+    },
+    {
+      "title": "El framework operacional 10x: escala sin caos",
+      "excerpt": "Pensamiento sistémico para el fundador moderno. Cómo construir procesos que evolucionen más rápido que tu headcount.",
+      "category": "Escala",
+      "readTime": "12 MIN DE LECTURA",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAolT4Cr-iLBI9MLpM7-wD7W96B786QlBwbjZKqjM3Mxl6mlGUHdRWmaqnWMAEhZFfx3In4Axela7vRKsbjVPHWstDzAVqG5XtWxv6FQcJngiuBxIDBk1E_uxMz6rtM9_nkfSgHyRZ7vb-K3bqT3G_X9WmKlEmPDN87HeF7VRO806IlJY6xkbHMSgqe74W3WtLUGcOBlRKvcufeTel_iMSt1NpspdbxTy5uKwGjax3DCxMbZOJNTqrRkpvY0v53mQZh_vzZb5LV_sU",
+      "imageAlt": "Artículo de escala",
+      "categoryClass": "bg-tertiary-fixed text-on-tertiary-fixed"
+    },
+    {
+      "title": "Web4 y el internet del valor: más allá del hype",
+      "excerpt": "Desmenuzando la utilidad real de las organizaciones autónomas descentralizadas en la gestión global de cadenas de suministro.",
+      "category": "Tech",
+      "readTime": "10 MIN DE LECTURA",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAbA7hOCOKNhDxuRk-0TJEob4Z8Eh38merGdYO_h0WzcDRG7bZpD1QNTOj8GAc9tmFchvt0UUx2Eayt6puN5gS962PXbK6QPIggcPfbU_yExcF676IlrltStDEYyeTAwn8paCD5DYCVAZCSO0jrc7LdDWk82bM-QeQT3SoQnbpG3p_6k9HQdy3FGwxIfrmf4tqsG5FD-Xgg-t1M_-6_AZMmyiEFxAgPSooIArkRh248LmsHQMzKEh_DfVr9O1p4e2x3MIve6tWLmbE",
+      "imageAlt": "Artículo de tecnología futura",
+      "categoryClass": "bg-tertiary-fixed text-on-tertiary-fixed"
+    },
+    {
+      "title": "La guía del ejecutivo para la transparencia radical",
+      "excerpt": "Por qué las empresas más exitosas están abriendo sus playbooks y compartiendo métricas internas con el mundo.",
+      "category": "Estrategia",
+      "readTime": "7 MIN DE LECTURA",
+      "href": "#",
+      "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBxiUT99Xkg_I8A_HG8yXyzs72QO3LVfVZNkBGV5mFz05qJOYhtvu716XqOg5TLJ2MWI2AG0yj9QsiKsKDOT_26pSR8W7T4U7xx9QFKJ2OQ9_SICP4ABNV2pFWz8ugNz2waVqnZIg6CxLyHa-0mWjfsAzCrLVZTdkrNpsM3SaPsFgMTCw1Kf3ZUj8Lrj1GHCwW5oYLJDyVu0pcwAdogj3YZ2lezASo3J4nT9GJ8aPzE8i58BIbu8XVFp4srCCjSVB7LqTPg97NNcpc",
+      "imageAlt": "Artículo de cultura",
+      "categoryClass": "bg-secondary-container text-on-secondary-container"
+    }
+  ],
+  "newsletter": {
+    "titleBefore": "ÚNETE A ",
+    "titleHighlight": "POPULUS",
+    "description": "Desgloses semanales de tecnología, cultura y estrategia que están impulsando el próximo siglo de crecimiento. Sin relleno. Solo insights cinéticos.",
+    "inputPlaceholder": "TU@EMAIL.COM",
+    "buttonText": "UNIRME"
+  }
+}

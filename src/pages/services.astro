@@ -1,0 +1,72 @@
+---
+import ServicesHero from '../components/services/ServicesHero.astro'
+import ServicesCategoriesGrid from '../components/services/ServicesCategoriesGrid.astro'
+import ServicesCategoryOne from '../components/services/ServicesCategoryOne.astro'
+import ServicesCategoryTwo from '../components/services/ServicesCategoryTwo.astro'
+import ServicesCategoryThree from '../components/services/ServicesCategoryThree.astro'
+import ServicesCategoryFour from '../components/services/ServicesCategoryFour.astro'
+import ServicesConnections from '../components/services/ServicesConnections.astro'
+import ServicesFinalCta from '../components/services/ServicesFinalCta.astro'
+
+import en from '../content/i18n/services.en.json'
+import MainLayout from "../layouts/MainLayout.astro";
+
+const t = en
+---
+<MainLayout lang="en" title="Services">
+    <main class="pt-32 pb-20">
+        <ServicesHero
+                title={t.hero.title}
+                description={t.hero.description}
+                highlight={t.hero.highlight}
+                badgeText={t.hero.badgeText}
+        />
+
+        <ServicesCategoriesGrid items={t.categoriesGrid.items}/>
+
+        <section class="space-y-32">
+            <ServicesCategoryOne
+                    coreLabel={t.categoryOne.coreLabel}
+                    title={t.categoryOne.title}
+                    description={t.categoryOne.description}
+                    items={t.categoryOne.items}
+            />
+
+            <ServicesCategoryTwo
+                    coreLabel={t.categoryTwo.coreLabel}
+                    title={t.categoryTwo.title}
+                    items={t.categoryTwo.items}
+                    imageSrc={t.categoryTwo.imageSrc}
+                    imageAlt={t.categoryTwo.imageAlt}
+            />
+
+            <ServicesCategoryThree
+                    coreLabel={t.categoryThree.coreLabel}
+                    title={t.categoryThree.title}
+                    items={t.categoryThree.items}
+                    imageSrc={t.categoryThree.imageSrc}
+                    imageAlt={t.categoryThree.imageAlt}
+            />
+
+            <ServicesCategoryFour
+                    coreLabel={t.categoryFour.coreLabel}
+                    title={t.categoryFour.title}
+                    description={t.categoryFour.description}
+                    items={t.categoryFour.items}
+            />
+        </section>
+
+        <ServicesConnections
+                title={t.connections.title}
+                descriptionBefore={t.connections.descriptionBefore}
+                highlightedWord={t.connections.highlightedWord}
+                descriptionAfter={t.connections.descriptionAfter}
+                icons={t.connections.icons}
+        />
+
+        <ServicesFinalCta
+                title={t.cta.title}
+                buttonText={t.cta.buttonText}
+        />
+    </main>
+</MainLayout>

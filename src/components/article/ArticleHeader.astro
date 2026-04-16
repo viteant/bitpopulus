@@ -1,0 +1,83 @@
+---
+interface Author {
+    label: string
+    name: string
+    avatarSrc: string
+    avatarAlt: string
+}
+
+interface ActionItem {
+    type: 'icon' | 'button'
+    icon?: string
+    label?: string
+}
+
+interface Props {
+    category: string
+    readTime: string
+    titleBefore: string
+    titleHighlight: string
+    titleAfter: string
+    author: Author
+    actions: ActionItem[]
+}
+
+const {
+    category,
+    readTime,
+    titleBefore,
+    titleHighlight,
+    titleAfter,
+    author,
+    actions
+} = Astro.props
+---
+
+<header class="relative mb-16">
+    <div class="flex items-center gap-3 mb-6">
+    <span class="bg-secondary-container text-on-secondary-container px-4 py-1 border-2 border-zinc-900 text-xs font-black uppercase tracking-widest neubrutal-shadow-sm">
+      {category}
+    </span>
+        <span class="text-on-surface-variant font-bold text-xs uppercase tracking-widest">
+      • {readTime}
+    </span>
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-zinc-900 mb-8 leading-[0.95]">
+        {titleBefore}
+        <span class="bg-gradient-to-r from-[#6A00F4] via-[#B5179E] to-[#FF7A00] bg-clip-text text-transparent">
+      {titleHighlight}
+    </span>
+        {titleAfter}
+    </h1>
+
+    <div class="flex flex-wrap items-center justify-between gap-6 border-y-4 border-zinc-900 py-6">
+        <div class="flex items-center gap-4">
+            <img
+                    src={author.avatarSrc}
+                    alt={author.avatarAlt}
+                    class="w-16 h-16 rounded-full border-4 border-zinc-900 object-cover neubrutal-shadow-sm"
+            />
+
+            <div>
+                <p class="font-black uppercase text-sm tracking-tighter">{author.label}</p>
+                <p class="text-xl font-bold text-[#6A00F4]">{author.name}</p>
+            </div>
+        </div>
+
+        <div class="flex gap-4">
+            {actions.map((action) =>
+                action.type === 'icon' ? (
+                        <button class="w-12 h-12 border-2 border-zinc-900 flex items-center justify-center neubrutal-shadow-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all bg-white" type="button">
+                            <span class="material-symbols-outlined">{action.icon}</span>
+                        </button>
+                ) : (
+                        <button class="bg-zinc-900 text-white px-6 py-2 flex items-center gap-2 border-2 border-zinc-900 neubrutal-shadow-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all" type="button">
+                            <span class="material-symbols-outlined text-sm">{action.icon}</span>
+                            <span class="font-black uppercase text-xs tracking-tighter">{action.label}</span>
+                        </button>
+                )
+            )}
+        </div>
+    </div>
+</header>

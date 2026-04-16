@@ -1,0 +1,13 @@
+---
+import {Image} from 'astro:assets';
+import BitPopulusLogo from '../assets/logo.svg'
+
+interface Props {
+    width: number
+}
+
+const props= Astro.props
+---
+
+<Image src={BitPopulusLogo} width={props.width} alt="BitPopulus Logo"/>
+

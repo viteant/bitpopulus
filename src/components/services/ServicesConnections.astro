@@ -1,0 +1,47 @@
+---
+interface Props {
+    title: string
+    descriptionBefore: string
+    highlightedWord: string
+    descriptionAfter: string
+    icons: string[]
+}
+
+const {
+    title,
+    descriptionBefore,
+    highlightedWord,
+    descriptionAfter,
+    icons
+} = Astro.props
+---
+
+<section class="max-w-7xl mx-auto px-8 mt-48 mb-32">
+    <div class="bg-gradient-to-br from-[#6A00F4] via-[#B5179E] to-[#FF7A00] p-16 border-4 border-[#2F343C] text-white relative overflow-hidden">
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-black uppercase mb-8 leading-none">{title}</h2>
+
+            <p class="text-xl font-medium mb-12 opacity-90 leading-relaxed">
+                {descriptionBefore}
+                <span class="underline decoration-4 decoration-[#FFD60A] underline-offset-8">
+          {highlightedWord}
+        </span>
+                {descriptionAfter}
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-8 items-center">
+                {icons.map((icon, index) => (
+                        <>
+                            <span class="material-symbols-outlined text-6xl!">{icon}</span>
+                            {index < icons.length - 1 && (
+                                    <div class="h-0.5 w-24 bg-white/30 hidden md:block"></div>
+                            )}
+                        </>
+                ))}
+            </div>
+        </div>
+
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 border-[20px] border-white/10 rounded-full"></div>
+        <div class="absolute top-10 right-10 w-20 h-20 bg-[#FFD60A] rotate-45 shadow-[8px_8px_0px_0px_#2F343C]"></div>
+    </div>
+</section>

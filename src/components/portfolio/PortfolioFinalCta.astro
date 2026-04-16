@@ -1,0 +1,50 @@
+---
+interface CtaButton {
+    label: string
+    variant: 'dark' | 'accent'
+}
+
+interface Props {
+    titleBefore: string
+    titleHighlight: string
+    description: string
+    buttons: CtaButton[]
+}
+
+const { titleBefore, titleHighlight, description, buttons } = Astro.props
+---
+
+<section class="px-8 py-32 bg-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-12">
+            {titleBefore}
+            <br />
+            <span class="bg-gradient-to-r from-[#6A00F4] via-[#B5179E] to-[#FF7A00] bg-clip-text text-transparent">
+        {titleHighlight}
+      </span>
+        </h2>
+
+        <p class="text-2xl font-bold text-on-surface-variant mb-12 max-w-2xl mx-auto">
+            {description}
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            {buttons.map((button) => (
+                    <button
+                            class={`px-12 py-6 text-2xl font-black uppercase border-4 border-black hard-shadow hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all ${
+                                button.variant === 'dark'
+                                    ? 'bg-black text-white'
+                                    : 'bg-[#FFD60A] text-black'
+                            }`}
+                            type="button"
+                    >
+                        {button.label}
+                    </button>
+            ))}
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-zinc-100 to-transparent"></div>
+    <div class="absolute top-1/2 -left-20 w-40 h-40 border-8 border-primary-container opacity-20 rotate-45"></div>
+    <div class="absolute top-1/4 -right-10 w-20 h-20 bg-[#FF7A00] border-4 border-black hard-shadow"></div>
+</section>

@@ -1,0 +1,54 @@
+---
+interface Props {
+    titleBefore: string
+    titleHighlight: string
+    description: string
+    inputPlaceholder: string
+    buttonText: string
+    formAction?: string
+    formMethod?: string
+}
+
+const {
+    titleBefore,
+    titleHighlight,
+    description,
+    inputPlaceholder,
+    buttonText,
+    formAction = '#',
+    formMethod = 'post'
+} = Astro.props
+---
+
+<section class="mt-20 p-1 bg-on-surface hard-shadow-lg">
+    <div class="bg-surface p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="md:w-1/2">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-6">
+                {titleBefore}
+                <span class="bg-gradient-to-r from-[#6A00F4] to-[#FF7A00] bg-clip-text text-transparent italic">
+          {titleHighlight}
+        </span>
+            </h2>
+
+            <p class="text-body-lg text-on-surface-variant max-w-md">{description}</p>
+        </div>
+
+        <div class="md:w-1/2 w-full">
+            <form action={formAction} method={formMethod} class="flex flex-col sm:flex-row gap-4">
+                <input
+                        class="flex-grow border-4 border-on-surface px-6 py-4 font-black uppercase tracking-widest focus:ring-0 focus:outline-none hard-shadow"
+                        placeholder={inputPlaceholder}
+                        type="email"
+                        name="email"
+                />
+
+                <button
+                        class="bg-primary text-on-primary border-4 border-on-surface px-8 py-4 font-black uppercase tracking-widest hard-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+                        type="submit"
+                >
+                    {buttonText}
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

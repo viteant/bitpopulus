@@ -1,0 +1,63 @@
+---
+import AboutHero from '../../components/about/AboutHero.astro'
+import AboutWhoWeAre from '../../components/about/AboutWhoWeAre.astro'
+import AboutMissionVisionValues from '../../components/about/AboutMissionVisionValues.astro'
+import AboutDifferentiators from '../../components/about/AboutDifferentiators.astro'
+import AboutTeamPillars from '../../components/about/AboutTeamPillars.astro'
+import AboutMethod from '../../components/about/AboutMethod.astro'
+import AboutBeliefs from '../../components/about/AboutBeliefs.astro'
+import AboutFinalCta from '../../components/about/AboutFinalCta.astro'
+import es from '../../content/i18n/about.es.json'
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const t = es
+---
+<MainLayout lang="es" title="Acerca de Nosotros">
+    <main class="overflow-hidden">
+        <AboutHero
+                badge={t.hero.badge}
+                titleBefore={t.hero.titleBefore}
+                titleHighlight={t.hero.titleHighlight}
+                description={t.hero.description}
+        />
+
+        <AboutWhoWeAre
+                title={t.whoWeAre.title}
+                paragraphs={t.whoWeAre.paragraphs}
+                focusTitle={t.whoWeAre.focusTitle}
+                focusDescription={t.whoWeAre.focusDescription}
+        />
+
+        <AboutMissionVisionValues
+                items={t.missionVisionValues.items}
+                valuesTitle={t.missionVisionValues.valuesTitle}
+                values={t.missionVisionValues.values}
+        />
+
+        <AboutMethod
+                title={t.method.title}
+                items={t.method.items}
+        />
+
+        <AboutDifferentiators
+                title={t.differentiators.title}
+                items={t.differentiators.items}
+        />
+
+        <AboutTeamPillars
+                title={t.teamPillars.title}
+                items={t.teamPillars.items}
+        />
+
+        <AboutBeliefs
+                title={t.beliefs.title}
+                items={t.beliefs.items}
+        />
+
+        <AboutFinalCta
+                badge={t.cta.badge}
+                title={t.cta.title}
+                buttonText={t.cta.buttonText}
+        />
+    </main>
+</MainLayout>
