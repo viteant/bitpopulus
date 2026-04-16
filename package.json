@@ -14,10 +14,20 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.4",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2"
   },
   "pnpm": {
-    "allowedBuilds": ["esbuild", "sharp"],
-    "onlyBuiltDependencies": ["sharp", "esbuild"]
+    "allowedBuilds": [
+      "esbuild",
+      "sharp"
+    ],
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
   }
 }
